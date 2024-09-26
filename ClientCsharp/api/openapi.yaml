@@ -1,0 +1,517 @@
+openapi: 3.0.1
+info:
+  title: TicketAlarm
+  version: v1
+servers:
+- url: /
+security:
+- Bearer: []
+paths:
+  /api/alarms/{idShow}:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: idShow
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/ShowDto'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/ShowDto'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/ShowDto'
+                type: array
+          description: Success
+      tags:
+      - Alarm
+  /api/alarms:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AlarmDto'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/AlarmDto'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/AlarmDto'
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                format: int32
+                type: integer
+            application/json:
+              schema:
+                format: int32
+                type: integer
+            text/json:
+              schema:
+                format: int32
+                type: integer
+          description: Success
+      tags:
+      - Alarm
+  /api/alarms/{idAlarm}:
+    put:
+      parameters:
+      - explode: false
+        in: path
+        name: idAlarm
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AlarmDto'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/AlarmDto'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/AlarmDto'
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ShowDto'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ShowDto'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ShowDto'
+          description: Success
+      tags:
+      - Alarm
+  /api/artists:
+    get:
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/ArtistDto'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/ArtistDto'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/ArtistDto'
+                type: array
+          description: Success
+      tags:
+      - Artist
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ArtistDto'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/ArtistDto'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/ArtistDto'
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                format: int32
+                type: integer
+            application/json:
+              schema:
+                format: int32
+                type: integer
+            text/json:
+              schema:
+                format: int32
+                type: integer
+          description: Success
+      tags:
+      - Artist
+  /api/availabilitys:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AvailabilityDto'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/AvailabilityDto'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/AvailabilityDto'
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  format: int32
+                  type: integer
+                type: array
+            application/json:
+              schema:
+                items:
+                  format: int32
+                  type: integer
+                type: array
+            text/json:
+              schema:
+                items:
+                  format: int32
+                  type: integer
+                type: array
+          description: Success
+      tags:
+      - Availability
+  /api/email:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AlarmDto'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/AlarmDto'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/AlarmDto'
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                format: int32
+                type: integer
+            application/json:
+              schema:
+                format: int32
+                type: integer
+            text/json:
+              schema:
+                format: int32
+                type: integer
+          description: Success
+      tags:
+      - Email
+  /api/shows:
+    get:
+      parameters:
+      - explode: true
+        in: query
+        name: active
+        required: false
+        schema:
+          type: boolean
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/ShowDto'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/ShowDto'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/ShowDto'
+                type: array
+          description: Success
+      tags:
+      - Show
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ShowDto'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/ShowDto'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/ShowDto'
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                format: int32
+                type: integer
+            application/json:
+              schema:
+                format: int32
+                type: integer
+            text/json:
+              schema:
+                format: int32
+                type: integer
+          description: Success
+      tags:
+      - Show
+  /api/shows/{idShow}:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: idShow
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ShowDto'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ShowDto'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ShowDto'
+          description: Success
+      tags:
+      - Show
+    put:
+      parameters:
+      - explode: false
+        in: path
+        name: idShow
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ShowDto'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/ShowDto'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/ShowDto'
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ShowDto'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ShowDto'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ShowDto'
+          description: Success
+      tags:
+      - Show
+  /authenticate:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginUserDto'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/LoginUserDto'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/LoginUserDto'
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                type: string
+            application/json:
+              schema:
+                type: string
+            text/json:
+              schema:
+                type: string
+          description: Success
+      tags:
+      - User
+components:
+  schemas:
+    AlarmDto:
+      additionalProperties: false
+      example:
+        dateTimeMailSent: 2000-01-23T04:56:07.000+00:00
+        dateTimeTextSent: 2000-01-23T04:56:07.000+00:00
+        mail: mail
+        phone: phone
+        dateTimeMailRequest: 2000-01-23T04:56:07.000+00:00
+        idShow: 6
+        idAlarm: 0
+        dateTimeTextRequest: 2000-01-23T04:56:07.000+00:00
+      properties:
+        idAlarm:
+          format: int32
+          type: integer
+        idShow:
+          format: int32
+          type: integer
+        mail:
+          nullable: true
+          type: string
+        phone:
+          nullable: true
+          type: string
+        dateTimeMailRequest:
+          format: date-time
+          nullable: true
+          type: string
+        dateTimeMailSent:
+          format: date-time
+          nullable: true
+          type: string
+        dateTimeTextRequest:
+          format: date-time
+          nullable: true
+          type: string
+        dateTimeTextSent:
+          format: date-time
+          nullable: true
+          type: string
+      type: object
+    ArtistDto:
+      additionalProperties: false
+      example:
+        urlPhoto: urlPhoto
+        name: name
+      properties:
+        name:
+          nullable: true
+          type: string
+        urlPhoto:
+          nullable: true
+          type: string
+      type: object
+    AvailabilityDto:
+      additionalProperties: false
+      example:
+        screenshot: screenshot
+        idShow: 0
+      properties:
+        idShow:
+          format: int32
+          type: integer
+        screenshot:
+          nullable: true
+          type: string
+      type: object
+    LoginUserDto:
+      additionalProperties: false
+      example:
+        emailAddress: emailAddress
+        password: password
+      properties:
+        emailAddress:
+          nullable: true
+          type: string
+        password:
+          nullable: true
+          type: string
+      type: object
+    ShowDto:
+      additionalProperties: false
+      example:
+        idArtist: 6
+        dateTimeShow: 2000-01-23T04:56:07.000+00:00
+        city: city
+        artist:
+          urlPhoto: urlPhoto
+          name: name
+        available: true
+        idFnac: 1
+        id: 0
+        arena: arena
+        title: title
+        url: url
+      properties:
+        id:
+          format: int32
+          type: integer
+        idArtist:
+          format: int32
+          type: integer
+        title:
+          nullable: true
+          type: string
+        dateTimeShow:
+          format: date-time
+          type: string
+        idFnac:
+          format: int32
+          type: integer
+        city:
+          nullable: true
+          type: string
+        arena:
+          nullable: true
+          type: string
+        url:
+          nullable: true
+          type: string
+        available:
+          type: boolean
+        artist:
+          $ref: '#/components/schemas/ArtistDto'
+      type: object
+  securitySchemes:
+    Bearer:
+      description: "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter\
+        \ 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample:\
+        \ \"Bearer monToken\""
+      in: header
+      name: Authorization
+      type: apiKey
+

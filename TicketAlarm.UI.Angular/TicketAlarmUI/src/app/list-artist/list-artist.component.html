@@ -1,0 +1,33 @@
+
+  <h1>Artistes</h1>
+  <ngx-masonry [options]="{ gutter: 30 }">
+    <div ngxMasonryItem class="masonry-item" *ngFor="let artist of listArtist">
+      <div class="card">
+        <img src="{{artist.urlPhoto}}" class="img-thumbnail" />
+        <div class="card-body">
+
+          <h5 class="card-title">
+            {{ artist.name }}
+          </h5>
+
+          <p class="card-text">
+            {{ artist.shows?.length }} date<span *ngIf='isPlural(artist)'>s</span> disponible<span
+              *ngIf='isPlural(artist)'>s</span>
+          </p>
+        </div>
+        <div class="card-footer" *ngFor="let show of artist.shows">
+          <div class="row">
+            <div class="col-9">
+              <div>{{show.city | titlecase }}</div>
+              <div>{{show.dateTimeShow | date:"dd/MM/yyyy HH:mm" }}</div>
+            </div>
+            <button type="button" class="btn btn-info col-3" data-toggle="tooltip" data-placement="top"
+              title="Recevoir une alerte" title="Recevoir une alerte" (click)="navigateToPage(show.id)">
+              ⏰
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </ngx-masonry>

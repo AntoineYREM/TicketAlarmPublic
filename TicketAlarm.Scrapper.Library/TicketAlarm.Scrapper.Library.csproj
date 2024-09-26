@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClientCsharp\src\Org.OpenAPITools\Org.OpenAPITools.csproj" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.24.0" />
+  </ItemGroup>
+
+
+
+</Project>

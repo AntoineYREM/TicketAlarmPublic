@@ -1,0 +1,4 @@
+.bg-header {
+    --bs-bg-opacity: 1;
+    background-color: #124E66 !important;
+  }

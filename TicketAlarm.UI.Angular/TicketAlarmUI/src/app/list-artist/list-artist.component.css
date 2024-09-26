@@ -1,0 +1,47 @@
+
+.bg-header {
+  --bs-bg-opacity: 1;
+  background-color: #124E66 !important;
+}
+
+  
+.btn-primary {
+  background-color:  #124E66 !important;
+  border-color: #124E66 !important;
+}
+
+  
+.btn-info {
+  background-color:  white !important;
+  border-color: #124E66 !important;
+}
+
+.grid {
+  background: #EEE;
+  /* center */
+  margin: 0 auto;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-item {
+  width: 180px;
+  height: 120px;
+  float: left;
+  background: #D26;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+}
+
+.grid-item--height2 { height: 200px; }
+.grid-item--height3 { height: 260px; }
+
+.masonry-item { width: 400px;  margin-bottom: 30px; }

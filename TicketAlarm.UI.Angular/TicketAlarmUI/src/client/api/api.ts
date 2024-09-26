@@ -1,0 +1,13 @@
+export * from './alarm.service';
+import { AlarmService } from './alarm.service';
+export * from './artist.service';
+import { ArtistService } from './artist.service';
+export * from './availability.service';
+import { AvailabilityService } from './availability.service';
+export * from './email.service';
+import { EmailService } from './email.service';
+export * from './show.service';
+import { ShowService } from './show.service';
+export * from './user.service';
+import { UserService } from './user.service';
+export const APIS = [AlarmService, ArtistService, AvailabilityService, EmailService, ShowService, UserService];

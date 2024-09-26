@@ -1,0 +1,82 @@
+version: '3'
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server
+    container_name: sqlserver
+    ports:
+      - 1433:1433
+    environment:
+      MSSQL_SA_PASSWORD: yourStrong(!)Password
+      ACCEPT_EULA: Y
+  ui:
+    build:
+      context: ./
+      dockerfile: UI.Dockerfile
+    ports:
+      - "8888:3000"
+  api:
+    build:
+      context: ./
+      dockerfile: API.Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Docker"
+    ports:
+      - "8080:8080"
+  scrapper:
+    build:
+      context: ./
+      dockerfile: ScrapperAvailability.Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Docker"
+    depends_on:
+      - selenium
+    restart: on-failure
+  selenium:
+      image: selenium/standalone-chrome:4.23.0
+      container_name: selenium
+      ports:
+        - "7900:7900"
+        - "4444:4444"
+      privileged: true
+      shm_size: 2g
+      healthcheck:
+          test: ["CMD", "wget", "--spider", "http://localhost:4444/grid/api/proxy"] 
+          interval: 10s
+          timeout: 5s
+          retries: 3
+  mqrabbit:
+    image: rabbitmq:3-management-alpine
+    container_name: mqrabbit
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=mypass
+    ports:
+        - "5672:5672"
+        # Web Interface
+        - "15672:15672"
+    healthcheck:
+      test: [ "CMD", "nc", "-z", "localhost", "5672" ]
+      interval: 5s
+      timeout: 15s
+      retries: 1
+  rabbitmqlistener:
+    build:
+      context: ./
+      dockerfile: RabbitMqListener.Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Docker"
+    depends_on:
+      - mqrabbit
+    restart: on-failure
+    stdin_open: true    
+    tty: true
+
+  sonarqube:
+    container_name: sonarqube
+    image: sonarqube
+    environment:
+      - SONARQUBE_JDBC_USERNAME=SA
+      - SONARQUBE_JDBC_PASSWORD=yourStrong(!)Password
+      - SONARQUBE_JDBC_URL=jdbc:sqlserver://localhost:1433
+    ports:
+      - 9000:9000
