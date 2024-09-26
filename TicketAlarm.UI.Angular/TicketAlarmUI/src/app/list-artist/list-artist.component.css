@@ -1,0 +1,40 @@
+
+.bg-header {
+  --bs-bg-opacity: 1;
+  background-color: #124E66 !important;
+}
+
+  
+.btn-primary {
+  background-color:  #124E66 !important;
+  border-color: #124E66 !important;
+}
+
+  
+.btn-info {
+  background-color:  white !important;
+  border-color: #124E66 !important;
+}
+
+.grid {
+  background: #EEE;
+  /* center */
+  margin: 0 auto;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.masonry-item { width: 31%;  margin-bottom: 30px; }
+
+@media only screen and (max-width: 600px) {
+ 
+    .masonry-item { width: 100%;  margin-bottom: 30px; }
+  
+}

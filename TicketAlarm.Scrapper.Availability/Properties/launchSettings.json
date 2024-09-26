@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "TicketAlarm.Scrapper.Availability": {
+      "commandName": "Project"
+    }
+  }
+}

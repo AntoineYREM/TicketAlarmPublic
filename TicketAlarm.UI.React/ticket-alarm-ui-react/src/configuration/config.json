@@ -1,0 +1,5 @@
+{
+    "apiEndpoint": "http://localhost:80/",
+    "apiEndpointDocker": "http://localhost:80/",
+    "apiEndpointLocal": "https://localhost:7015/"
+}

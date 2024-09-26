@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>CS4014</WarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TicketAlarm.Domain\TicketAlarm.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.10.0" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.33" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Availability\Handlers\Queries\" />
+    <Folder Include="Features\Availability\Requests\Queries\" />
+    <Folder Include="Features\Message\Handlers\Queries\" />
+    <Folder Include="Features\Message\Requests\Queries\" />
+    <Folder Include="Features\User\Handlers\Commands\" />
+    <Folder Include="Features\User\Requests\Commands\" />
+  </ItemGroup>
+
+</Project>

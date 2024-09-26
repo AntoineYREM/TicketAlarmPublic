@@ -1,0 +1,65 @@
+<div class="small-middle-container">
+    <div class="row">
+      <div class="col-md-4 col-sm-12 mb-2">
+        <span>
+            <div class="card card-no-border">
+              <img className="img-thumbnail" [src]="show.artist?.urlPhoto"/>
+
+            
+            </div>
+          </span>
+      </div>
+      <div class="col-md-8 col-sm-12">
+        <span>
+            <div class="card">
+             
+              <div class="card-body">
+                <h5 class="card-title">{{ show.artist?.name }}</h5>
+                <p class="card-text">{{ show.title }}</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  {{ show.city | titlecase }} - {{ show.arena }}
+                </li>
+                <li class="list-group-item font-italic"> {{ show.dateTimeShow | date:"dd/MM/yyyy HH:mm" }} </li>
+              </ul>
+              <div class="card-body"><a [href]="show.url" target="_blank" >Lien événement</a>&nbsp;&nbsp;<a href="/">Retour</a> </div>
+            </div>
+          </span>
+      </div>
+      
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-12">
+        <form [formGroup]="alarmForm" class="form-group" (ngSubmit)="onSubmit()">
+            <span>
+              <div class="container">
+                <div className="row">
+                  <h3>Recevoir une alerte &#x23F0;</h3>
+                </div>
+                <div class="row mt-3">
+                  <input
+                    onChange=this.handleChange
+                    type="text"
+                    name="email"
+                    label="email"
+                    class="form-control form-control-lg"
+                    placeholder="Email"
+                    formControlName="email"
+                  />
+                </div>
+                <div class="row  mt-3 alert-alert-danger" *ngIf="this.alarmForm.controls['email'].errors && this.alarmForm.touched">
+                      Saisissez une adresse e-mail valide.
+                </div>
+                <div class="row mt-3 ">
+                  <button class="btn btn-lg btn-primary">Valider</button>
+                </div>
+              </div>
+            </span>
+          </form>
+      </div>
+    </div>
+
+    
+  </div>

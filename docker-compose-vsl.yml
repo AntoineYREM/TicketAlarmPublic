@@ -1,0 +1,24 @@
+version: '3'
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server
+    container_name: sqlserver
+    ports:
+      - 1433:1433
+    environment:
+      MSSQL_SA_PASSWORD: yourStrong(!)Password
+      ACCEPT_EULA: Y
+  api:
+    build:
+      context: ./
+      dockerfile: API.Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Production"
+      ASPNETCORE_URLS: "https://*:81;http://*:80"
+      ASPNETCORE_Kestrel__Certificates__Default__Path: "/cert/live/vps.aaaab3nzac1yc.website/fullchain.pem"
+      ASPNETCORE_Kestrel__Certificates__Default__KeyPath: "/cert/live/vps.aaaab3nzac1yc.website/privkey.pem"
+    ports:
+      - "80:80"
+      - "81:81"
+    volumes:
+      - /etc/letsencrypt:/cert

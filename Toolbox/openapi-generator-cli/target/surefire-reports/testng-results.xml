@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="48" passed="48" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-09-24T15:52:56 GMT" name="Surefire suite" finished-at="2024-09-24T15:53:00 GMT" duration-ms="3928">
+    <groups>
+    </groups>
+    <test started-at="2024-09-24T15:52:56 GMT" name="Surefire test" finished-at="2024-09-24T15:53:00 GMT" duration-ms="3928">
+      <class name="org.openapitools.codegen.cmd.GenerateTest">
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:56 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:57 GMT" duration-ms="1147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testAdditionalPropertiesLong()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:57 GMT" name="testAdditionalPropertiesLong" finished-at="2024-09-24T15:52:58 GMT" duration-ms="957" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAdditionalPropertiesLong -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:58 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:58 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:58 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:58 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testAdditionalPropertiesLongMultiple()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:58 GMT" name="testAdditionalPropertiesLongMultiple" finished-at="2024-09-24T15:52:58 GMT" duration-ms="203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAdditionalPropertiesLongMultiple -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testApiPackage()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testApiPackage" finished-at="2024-09-24T15:52:59 GMT" duration-ms="89" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApiPackage -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testArtifactId()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testArtifactId" finished-at="2024-09-24T15:52:59 GMT" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testArtifactId -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testArtifactVersion()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testArtifactVersion" finished-at="2024-09-24T15:52:59 GMT" duration-ms="76" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testArtifactVersion -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testAuthLong()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testAuthLong" finished-at="2024-09-24T15:52:59 GMT" duration-ms="74" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAuthLong -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testAuthShort()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testAuthShort" finished-at="2024-09-24T15:52:59 GMT" duration-ms="77" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAuthShort -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testAuthUnspecified()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testAuthUnspecified" finished-at="2024-09-24T15:52:59 GMT" duration-ms="60" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAuthUnspecified -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testConfigJsonLong()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testConfigJsonLong" finished-at="2024-09-24T15:52:59 GMT" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConfigJsonLong -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testConfigJsonShort()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testConfigJsonShort" finished-at="2024-09-24T15:52:59 GMT" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConfigJsonShort -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testConfigYamlLong()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testConfigYamlLong" finished-at="2024-09-24T15:52:59 GMT" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConfigYamlLong -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testConfigYamlShort()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testConfigYamlShort" finished-at="2024-09-24T15:52:59 GMT" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConfigYamlShort -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testGroupId()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testGroupId" finished-at="2024-09-24T15:52:59 GMT" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGroupId -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testImportMappingsLong()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testImportMappingsLong" finished-at="2024-09-24T15:52:59 GMT" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testImportMappingsLong -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testImportMappingsLongMultiple()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testImportMappingsLongMultiple" finished-at="2024-09-24T15:52:59 GMT" duration-ms="32" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testImportMappingsLongMultiple -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testInstantiationTypesLong()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testInstantiationTypesLong" finished-at="2024-09-24T15:52:59 GMT" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInstantiationTypesLong -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testInstantiationTypesLongMultiple()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testInstantiationTypesLongMultiple" finished-at="2024-09-24T15:52:59 GMT" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInstantiationTypesLongMultiple -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testInvokerPackage()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testInvokerPackage" finished-at="2024-09-24T15:52:59 GMT" duration-ms="30" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvokerPackage -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testLanguageSpecificPrimitives()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testLanguageSpecificPrimitives" finished-at="2024-09-24T15:52:59 GMT" duration-ms="30" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLanguageSpecificPrimitives -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testLibrary()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testLibrary" finished-at="2024-09-24T15:52:59 GMT" duration-ms="28" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLibrary -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testModelPackage()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testModelPackage" finished-at="2024-09-24T15:52:59 GMT" duration-ms="28" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testModelPackage -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="afterEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="beforeEachTest" finished-at="2024-09-24T15:52:59 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testNPEWithInvalidSpecFile()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:52:59 GMT" name="testNPEWithInvalidSpecFile" finished-at="2024-09-24T15:53:00 GMT" duration-ms="90" status="PASS">
+          <exception class="org.openapitools.codegen.SpecValidationException">
+            <message>
+              <![CDATA[There were issues with the specification. The option can be disabled via validateSpec (Maven/Gradle) or --skip-validate-spec (CLI).
+ | Error count: 1, Warning count: 0
+Errors: 
+-null
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openapitools.codegen.SpecValidationException: There were issues with the specification. The option can be disabled via validateSpec (Maven/Gradle) or --skip-validate-spec (CLI).
+ | Error count: 1, Warning count: 0
+Errors: 
+-null
+
+at org.openapitools.codegen.config.CodegenConfigurator.toContext(CodegenConfigurator.java:717)
+at org.openapitools.codegen.config.CodegenConfigurator.toClientOptInput(CodegenConfigurator.java:744)
+at org.openapitools.codegen.cmd.Generate.execute(Generate.java:527)
+at org.openapitools.codegen.cmd.OpenApiGeneratorCommand.run(OpenApiGeneratorCommand.java:32)
+at org.openapitools.codegen.cmd.GenerateTest.setupAndRunTest(GenerateTest.java:121)
+at org.openapitools.codegen.cmd.GenerateTest.testNPEWithInvalidSpecFile(GenerateTest.java:440)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:829)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openapitools.codegen.SpecValidationException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNPEWithInvalidSpecFile -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="beforeEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="afterEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method signature="testPackageName()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="testPackageName" finished-at="2024-09-24T15:53:00 GMT" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPackageName -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="afterEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method signature="testRequiredArgs_LongArgs()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="testRequiredArgs_LongArgs" finished-at="2024-09-24T15:53:00 GMT" duration-ms="28" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRequiredArgs_LongArgs -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="beforeEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="afterEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="beforeEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testRequiredArgs_ShortArgs()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="testRequiredArgs_ShortArgs" finished-at="2024-09-24T15:53:00 GMT" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRequiredArgs_ShortArgs -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="afterEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="beforeEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testSkipOverwriteLong()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="testSkipOverwriteLong" finished-at="2024-09-24T15:53:00 GMT" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSkipOverwriteLong -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="afterEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="beforeEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testSkipOverwriteShort()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="testSkipOverwriteShort" finished-at="2024-09-24T15:53:00 GMT" duration-ms="38" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSkipOverwriteShort -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="afterEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="beforeEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testStrictSpecFalse()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="testStrictSpecFalse" finished-at="2024-09-24T15:53:00 GMT" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStrictSpecFalse -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="afterEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="beforeEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testStrictSpecTrue()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="testStrictSpecTrue" finished-at="2024-09-24T15:53:00 GMT" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStrictSpecTrue -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="afterEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="beforeEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testTemplateDirLong()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="testTemplateDirLong" finished-at="2024-09-24T15:53:00 GMT" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTemplateDirLong -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="afterEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="beforeEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testTemplateDirMustExist()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="testTemplateDirMustExist" finished-at="2024-09-24T15:53:00 GMT" duration-ms="5" status="PASS">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Template directory src/main/resources/customTemplates does not exist.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Template directory src/main/resources/customTemplates does not exist.
+at org.openapitools.codegen.config.WorkflowSettings$Builder.withTemplateDir(WorkflowSettings.java:500)
+at org.openapitools.codegen.config.CodegenConfigurator.setTemplateDir(CodegenConfigurator.java:615)
+at org.openapitools.codegen.cmd.Generate.execute(Generate.java:406)
+at org.openapitools.codegen.cmd.OpenApiGeneratorCommand.run(OpenApiGeneratorCommand.java:32)
+at org.openapitools.codegen.cmd.GenerateTest.setupAndRunTest(GenerateTest.java:121)
+at org.openapitools.codegen.cmd.GenerateTest.setupAndRunGenericTest(GenerateTest.java:98)
+at org.openapitools.codegen.cmd.GenerateTest.testTemplateDirMustExist(GenerateTest.java:375)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:829)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTemplateDirMustExist -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="afterEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="beforeEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testTemplateDirShort()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="testTemplateDirShort" finished-at="2024-09-24T15:53:00 GMT" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTemplateDirShort -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="afterEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method signature="testTypeMappingsLong()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="testTypeMappingsLong" finished-at="2024-09-24T15:53:00 GMT" duration-ms="29" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTypeMappingsLong -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="beforeEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="afterEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="beforeEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testTypeMappingsLongMultiple()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="testTypeMappingsLongMultiple" finished-at="2024-09-24T15:53:00 GMT" duration-ms="25" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTypeMappingsLongMultiple -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="afterEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="beforeEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testVerboseLong()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="testVerboseLong" finished-at="2024-09-24T15:53:00 GMT" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testVerboseLong -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="afterEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method is-config="true" signature="beforeEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="beforeEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method signature="testVerboseShort()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="testVerboseShort" finished-at="2024-09-24T15:53:00 GMT" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testVerboseShort -->
+        <test-method is-config="true" signature="afterEachTest()[pri:0, instance:org.openapitools.codegen.cmd.GenerateTest@60003305]" started-at="2024-09-24T15:53:00 GMT" name="afterEachTest" finished-at="2024-09-24T15:53:00 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+      </class> <!-- org.openapitools.codegen.cmd.GenerateTest -->
+      <class name="org.openapitools.codegen.cmd.AuthorTemplateTest">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:org.openapitools.codegen.cmd.AuthorTemplateTest@35e357b]" started-at="2024-09-24T15:52:56 GMT" name="setUp" finished-at="2024-09-24T15:52:56 GMT" duration-ms="37" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2fbc704a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="smokeTestAuthorTemplateCommand()[pri:0, instance:org.openapitools.codegen.cmd.AuthorTemplateTest@35e357b]" started-at="2024-09-24T15:52:56 GMT" name="smokeTestAuthorTemplateCommand" finished-at="2024-09-24T15:52:58 GMT" duration-ms="1761" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- smokeTestAuthorTemplateCommand -->
+      </class> <!-- org.openapitools.codegen.cmd.AuthorTemplateTest -->
+      <class name="org.openapitools.codegen.cmd.GenerateBatchTest">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:org.openapitools.codegen.cmd.GenerateBatchTest@1b3a95d9]" started-at="2024-09-24T15:52:56 GMT" name="setUp" finished-at="2024-09-24T15:52:56 GMT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2fbc704a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testDeserializerWithJsonInclude(java.lang.String)[pri:0, instance:org.openapitools.codegen.cmd.GenerateBatchTest@1b3a95d9]" started-at="2024-09-24T15:52:56 GMT" name="testDeserializerWithJsonInclude" data-provider="customIncludeDeserializerFiles" finished-at="2024-09-24T15:52:58 GMT" duration-ms="2029" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jaxrs-datelib-j8.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeserializerWithJsonInclude -->
+        <test-method signature="testDeserializerWithJsonInclude(java.lang.String)[pri:0, instance:org.openapitools.codegen.cmd.GenerateBatchTest@1b3a95d9]" started-at="2024-09-24T15:52:58 GMT" name="testDeserializerWithJsonInclude" data-provider="customIncludeDeserializerFiles" finished-at="2024-09-24T15:52:58 GMT" duration-ms="103" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jaxrs-datelib-j8.yaml]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeserializerWithJsonInclude -->
+        <test-method signature="testDeserializerWithJsonInclude(java.lang.String)[pri:0, instance:org.openapitools.codegen.cmd.GenerateBatchTest@1b3a95d9]" started-at="2024-09-24T15:52:58 GMT" name="testDeserializerWithJsonInclude" data-provider="customIncludeDeserializerFiles" finished-at="2024-09-24T15:52:59 GMT" duration-ms="226" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jaxrs-datelib-j8-json-include.yaml]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeserializerWithJsonInclude -->
+        <test-method signature="testDeserializerWithJsonInclude(java.lang.String)[pri:0, instance:org.openapitools.codegen.cmd.GenerateBatchTest@1b3a95d9]" started-at="2024-09-24T15:52:59 GMT" name="testDeserializerWithJsonInclude" data-provider="customIncludeDeserializerFiles" finished-at="2024-09-24T15:52:59 GMT" duration-ms="109" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jaxrs-datelib-j8-double.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeserializerWithJsonInclude -->
+        <test-method signature="testDeserializerWithJsonInclude(java.lang.String)[pri:0, instance:org.openapitools.codegen.cmd.GenerateBatchTest@1b3a95d9]" started-at="2024-09-24T15:52:59 GMT" name="testDeserializerWithJsonInclude" data-provider="customIncludeDeserializerFiles" finished-at="2024-09-24T15:52:59 GMT" duration-ms="79" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jaxrs-datelib-j8-double.yaml]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeserializerWithJsonInclude -->
+        <test-method signature="testDeserializerWithJsonInclude(java.lang.String)[pri:0, instance:org.openapitools.codegen.cmd.GenerateBatchTest@1b3a95d9]" started-at="2024-09-24T15:52:59 GMT" name="testDeserializerWithJsonInclude" data-provider="customIncludeDeserializerFiles" finished-at="2024-09-24T15:52:59 GMT" duration-ms="75" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jaxrs-datelib-j8-nested.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeserializerWithJsonInclude -->
+        <test-method signature="testDeserializerWithJsonInclude(java.lang.String)[pri:0, instance:org.openapitools.codegen.cmd.GenerateBatchTest@1b3a95d9]" started-at="2024-09-24T15:52:59 GMT" name="testDeserializerWithJsonInclude" data-provider="customIncludeDeserializerFiles" finished-at="2024-09-24T15:52:59 GMT" duration-ms="51" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jaxrs-datelib-j8-nested.yaml]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeserializerWithJsonInclude -->
+        <test-method signature="testDeserializerWithJsonInclude(java.lang.String)[pri:0, instance:org.openapitools.codegen.cmd.GenerateBatchTest@1b3a95d9]" started-at="2024-09-24T15:52:59 GMT" name="testDeserializerWithJsonInclude" data-provider="customIncludeDeserializerFiles" finished-at="2024-09-24T15:52:59 GMT" duration-ms="86" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jaxrs-datelib-j8-nested-property-merge.yaml]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeserializerWithJsonInclude -->
+        <test-method signature="testInvalidDeserializerWithIncludeOption()[pri:0, instance:org.openapitools.codegen.cmd.GenerateBatchTest@1b3a95d9]" started-at="2024-09-24T15:52:59 GMT" name="testInvalidDeserializerWithIncludeOption" finished-at="2024-09-24T15:52:59 GMT" duration-ms="36" status="PASS">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Unable to deserialize config file: D:\a\openapi-generator\openapi-generator\modules\openapi-generator-cli\src\test\resources\batch\jaxrs-datelib-j8-yaml-include.json]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Unable to deserialize config file: D:\a\openapi-generator\openapi-generator\modules\openapi-generator-cli\src\test\resources\batch\jaxrs-datelib-j8-yaml-include.json
+at org.openapitools.codegen.config.CodegenConfigurator.readDynamicSettings(CodegenConfigurator.java:195)
+at org.openapitools.codegen.config.CodegenConfigurator.fromFile(CodegenConfigurator.java:96)
+at org.openapitools.codegen.cmd.GenerateBatchTest.testInvalidDeserializerWithIncludeOption(GenerateBatchTest.java:100)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:829)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidDeserializerWithIncludeOption -->
+      </class> <!-- org.openapitools.codegen.cmd.GenerateBatchTest -->
+      <class name="org.openapitools.codegen.cmd.utils.OptionUtilsTest">
+        <test-method signature="splitCommaSeparatedList()[pri:0, instance:org.openapitools.codegen.cmd.utils.OptionUtilsTest@3f1dadeb]" started-at="2024-09-24T15:52:56 GMT" name="splitCommaSeparatedList" finished-at="2024-09-24T15:52:56 GMT" duration-ms="75" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- splitCommaSeparatedList -->
+        <test-method signature="testParseCommaSeparatedTuples()[pri:0, instance:org.openapitools.codegen.cmd.utils.OptionUtilsTest@3f1dadeb]" started-at="2024-09-24T15:52:56 GMT" name="testParseCommaSeparatedTuples" finished-at="2024-09-24T15:52:56 GMT" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParseCommaSeparatedTuples -->
+      </class> <!-- org.openapitools.codegen.cmd.utils.OptionUtilsTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
