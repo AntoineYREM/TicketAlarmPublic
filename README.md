@@ -1,4 +1,4 @@
-# Ticket Alarm V0.1
+# Ticket Alarm V0.2
 ![](https://github.com/AntoineYREM/TicketAlarm/blob/master/demo-v0.gif)
 
 
@@ -37,11 +37,13 @@ add-migration "nom migration"
 update-database
 ```
 
+### Docker
 
 
-
+```sh
 docker build -f API.Dockerfile .
+```
 
+```sh
 docker run -d -p 4444:4444 -p 7900:7900 -e SE_NODE_MAX_SESSIONS=5  --shm-size="2g" selenium/standalone-chrome:latest
-
-c80fc292fe6e
+```
