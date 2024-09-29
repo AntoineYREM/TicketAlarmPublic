@@ -1,5 +1,5 @@
 # Ticket Alarm V0.1
-![](https://github.com/AntoineYREM/TicketAlarmPublic/blob/main/demo-v0.gif)
+![](https://github.com/AntoineYREM/TicketAlarm/blob/master/demo-v0.gif)
 
 
 
@@ -14,7 +14,7 @@ Commandes pour générer le code client
 
 Javascript
 ```sh
-java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i swagger.json  -l javascript  -o C:\Users\Antoine\Documents\TicketAlarm\TicketAlarm.UI.React\ticket-alarm-ui-react\src\client
+java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i https://petstore.swagger.io/v2/swagger.json  -l javascript  -o C:\Users\Antoine\Documents\TicketAlarm\TicketAlarm.UI.React\ticket-alarm-ui-react\src\client
 ```
 
 C#
@@ -26,3 +26,22 @@ java -jar modules/openapi-generator-cli/target/openapi-generator-cli.jar generat
 Les tests unitaires se trouvent dans le projet 
 TicketAlarm.Application.UnitTests
 
+### Docker 
+```sh
+docker-compose up 
+```
+
+### Base de données
+```sh
+add-migration "nom migration" 
+update-database
+```
+
+
+
+
+docker build -f API.Dockerfile .
+
+docker run -d -p 4444:4444 -p 7900:7900 -e SE_NODE_MAX_SESSIONS=5  --shm-size="2g" selenium/standalone-chrome:latest
+
+c80fc292fe6e

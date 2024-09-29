@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ClientCsharp\src\Org.OpenAPITools\Org.OpenAPITools.csproj" />
+    <ProjectReference Include="..\TicketAlarm.Scrapper.Library\TicketAlarm.Scrapper.Library.csproj" />
   </ItemGroup>
 
 </Project>

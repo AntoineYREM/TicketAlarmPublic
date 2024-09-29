@@ -40,7 +40,7 @@ class ApiClient {
          * @default http://localhost
          */
         this.basePath = basePath.replace(/\/+$/, '');
-
+console.log(this.basePath);
         /**
          * The authentication methods to be included for all API calls.
          * @type {Array.<String>}
@@ -165,6 +165,7 @@ class ApiClient {
             return encodeURIComponent(value);
         });
 
+        console.log("77777777777777777777",url);
         return url;
     }
 

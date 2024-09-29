@@ -4,6 +4,7 @@ import ShowApi from "../../client/src/api/ShowApi";
 import Show from "./show";
 import ShowInfo from "./showInfo";
 import Caroussel from "../shared/caroussel";
+import config from "../../configuration/config.json"
 
 class Shows extends Component {
   state = {
@@ -15,7 +16,9 @@ class Shows extends Component {
   }
 
   getShows() {
-    let apiClient = new ApiClient("https://localhost:7015/");
+    console.log("AAAAAAAAAAAAAAAAAAAAAAAAA");
+    console.log(config.apiEndpoint);
+    let apiClient = new ApiClient(config.apiEndpoint);
     let showApi = new ShowApi(apiClient);
     let that = this;
     showApi.apiShowsGet(null, (error, result) => {
@@ -37,6 +40,7 @@ class Shows extends Component {
   }
 
   render() {
+    console.log("AAAAAAAAAAAAAAAAAAAAAAAAA");
     // this.getShows();
     console.log(this.shows);
     let resut = null;

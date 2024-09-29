@@ -12,7 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
+Console.WriteLine(builder.Configuration.GetConnectionString("TicketAlarmConnectionString"));
 builder.Services.ConfigureApplicationServices();
 builder.Services.ConfigureInfrasructureServices(builder.Configuration);
 builder.Services.ConfigurePersistenceServices(builder.Configuration);
@@ -30,11 +30,11 @@ builder.Services.AddCors(o =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 
 app.UseHttpsRedirection();
 

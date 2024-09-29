@@ -1,13 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
-using OpenQA.Selenium;
-using System.Runtime.CompilerServices;
-using TicketAlarm.Scrapper;
+﻿
 
-Scrapper scrapper = new Scrapper();
+using TicketAlarm.Scrapper.Library;
+
+Scrapper scrapper = new Scrapper("https://localhost:7015/");
 
 while (true)
 {
-    var urlEvent = Console.ReadLine();
-    scrapper.ScrapEventAsync(urlEvent);
+    var urlEvent = Console.ReadLine() ?? "";
+    await scrapper.AddShow(urlEvent);
 }
 

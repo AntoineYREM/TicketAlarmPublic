@@ -50,6 +50,8 @@ namespace TicketAlarm.Application.Features.Availability.Handlers.Commands
 
             }
 
+            await UnitOfWork.Save();
+
             return availabilityId;
         }
     }

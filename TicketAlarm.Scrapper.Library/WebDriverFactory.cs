@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TicketAlarm.Scrapper
+namespace TicketAlarm.Scrapper.Library
 {
     public static class WebDriverFactory
     {

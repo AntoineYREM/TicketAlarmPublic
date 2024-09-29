@@ -8,3 +8,21 @@ services:
     environment:
       MSSQL_SA_PASSWORD: yourStrong(!)Password
       ACCEPT_EULA: Y
+  ui:
+    build:
+      context: ./
+      dockerfile: UI.Dockerfile
+    ports:
+      - "8888:3000"
+  api:
+    build:
+      context: ./
+      dockerfile: API.Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Docker"
+    ports:
+      - "80:80"
+  scrapper:
+    build:
+      context: ./
+      dockerfile: ScrapperAvailability.Dockerfile

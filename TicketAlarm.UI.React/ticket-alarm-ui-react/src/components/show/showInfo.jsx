@@ -16,10 +16,17 @@ class ShowInfo extends Component {
     if (show == null) return;
 
     let linkPart = "";
+
+    var insideHomeLink = "pas dispo"
+    if(show.available)
+      insideHomeLink = "dispo";
+
     if (home) {
       linkPart = (
         <span>
           <a href={"/alarm/" + show.id}>
+            
+            { insideHomeLink }
             Recevoir une alerte
           </a>{" "}
           &#x23F0;

@@ -21,6 +21,7 @@ namespace TicketAlarm.Application.Features.Show.Handlers.Queries
         public async Task<List<ShowDto>> Handle(GetShowsRequest request, CancellationToken cancellationToken)
         {
             var show = await UnitOfWork.ShowRepository.GetAllAsync(s => s.Include(s => s.Artist));
+            if(request.Active) show = show.Where(s => s.DateTimeShow > DateTime.Now);
             return Mapper.Map<List<ShowDto>>(show);
         }
     }

@@ -5,6 +5,7 @@ import AlarmApi from "./../../client/src/api/AlarmApi";
 import AlarmDto from "../../client/src/model/AlarmDto";
 import ApiClient from "../../client/src/ApiClient";
 import { toast } from "react-toastify";
+import config from "../../configuration/config.json";
 
 class AlarmForm extends MyForm {
   state = {
@@ -23,7 +24,7 @@ class AlarmForm extends MyForm {
   });
 
   addAlarm() {
-    let apiClient = new ApiClient("https://localhost:7015/");
+    let apiClient = new ApiClient(config.apiEndpoint);
     let alarmApi = new AlarmApi(apiClient);
 
     alarmApi.apiAlarmsPost(

@@ -15,15 +15,20 @@ namespace TicketAlarm.Persistence
     {
         public static IServiceCollection ConfigurePersistenceServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<TicketAlarmDbContext>(option => option.UseSqlServer(configuration.GetConnectionString("TicketAlarmConnectionString")));
+            services.AddDbContext<TicketAlarmDbContext>(option =>
+            {
+                option.UseSqlServer(configuration.GetConnectionString("TicketAlarmConnectionString"));
+                
+            }, ServiceLifetime.Transient);
+
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            //services.AddScoped<IArtistRepository, ArtistRepository>();
-            //services.AddScoped<IShowRepository, ShowRepository>();
-            //services.AddScoped<IAlarmRepository, AlarmRepository>();
-            //services.AddScoped<IAvailabilityRepository, AvailabilityRepository>();
+            services.AddScoped<IArtistRepository, ArtistRepository>();
+            services.AddScoped<IShowRepository, ShowRepository>();
+            services.AddScoped<IAlarmRepository, AlarmRepository>();
+            services.AddScoped<IAvailabilityRepository, AvailabilityRepository>();
 
             return services;
         }
