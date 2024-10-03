@@ -34,6 +34,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AlarmDto" /> class.
         /// </summary>
+        /// <param name="idAlarm">idAlarm.</param>
         /// <param name="idShow">idShow.</param>
         /// <param name="mail">mail.</param>
         /// <param name="phone">phone.</param>
@@ -41,8 +42,9 @@ namespace Org.OpenAPITools.Model
         /// <param name="dateTimeMailSent">dateTimeMailSent.</param>
         /// <param name="dateTimeTextRequest">dateTimeTextRequest.</param>
         /// <param name="dateTimeTextSent">dateTimeTextSent.</param>
-        public AlarmDto(int idShow = default(int), string mail = default(string), string phone = default(string), DateTime dateTimeMailRequest = default(DateTime), DateTime dateTimeMailSent = default(DateTime), DateTime dateTimeTextRequest = default(DateTime), DateTime dateTimeTextSent = default(DateTime))
+        public AlarmDto(int idAlarm = default(int), int idShow = default(int), string mail = default(string), string phone = default(string), DateTime? dateTimeMailRequest = default(DateTime?), DateTime? dateTimeMailSent = default(DateTime?), DateTime? dateTimeTextRequest = default(DateTime?), DateTime? dateTimeTextSent = default(DateTime?))
         {
+            this.IdAlarm = idAlarm;
             this.IdShow = idShow;
             this.Mail = mail;
             this.Phone = phone;
@@ -51,6 +53,12 @@ namespace Org.OpenAPITools.Model
             this.DateTimeTextRequest = dateTimeTextRequest;
             this.DateTimeTextSent = dateTimeTextSent;
         }
+
+        /// <summary>
+        /// Gets or Sets IdAlarm
+        /// </summary>
+        [DataMember(Name = "idAlarm", EmitDefaultValue = false)]
+        public int IdAlarm { get; set; }
 
         /// <summary>
         /// Gets or Sets IdShow
@@ -73,26 +81,26 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets DateTimeMailRequest
         /// </summary>
-        [DataMember(Name = "dateTimeMailRequest", EmitDefaultValue = false)]
-        public DateTime DateTimeMailRequest { get; set; }
+        [DataMember(Name = "dateTimeMailRequest", EmitDefaultValue = true)]
+        public DateTime? DateTimeMailRequest { get; set; }
 
         /// <summary>
         /// Gets or Sets DateTimeMailSent
         /// </summary>
-        [DataMember(Name = "dateTimeMailSent", EmitDefaultValue = false)]
-        public DateTime DateTimeMailSent { get; set; }
+        [DataMember(Name = "dateTimeMailSent", EmitDefaultValue = true)]
+        public DateTime? DateTimeMailSent { get; set; }
 
         /// <summary>
         /// Gets or Sets DateTimeTextRequest
         /// </summary>
-        [DataMember(Name = "dateTimeTextRequest", EmitDefaultValue = false)]
-        public DateTime DateTimeTextRequest { get; set; }
+        [DataMember(Name = "dateTimeTextRequest", EmitDefaultValue = true)]
+        public DateTime? DateTimeTextRequest { get; set; }
 
         /// <summary>
         /// Gets or Sets DateTimeTextSent
         /// </summary>
-        [DataMember(Name = "dateTimeTextSent", EmitDefaultValue = false)]
-        public DateTime DateTimeTextSent { get; set; }
+        [DataMember(Name = "dateTimeTextSent", EmitDefaultValue = true)]
+        public DateTime? DateTimeTextSent { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -102,6 +110,7 @@ namespace Org.OpenAPITools.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class AlarmDto {\n");
+            sb.Append("  IdAlarm: ").Append(IdAlarm).Append("\n");
             sb.Append("  IdShow: ").Append(IdShow).Append("\n");
             sb.Append("  Mail: ").Append(Mail).Append("\n");
             sb.Append("  Phone: ").Append(Phone).Append("\n");

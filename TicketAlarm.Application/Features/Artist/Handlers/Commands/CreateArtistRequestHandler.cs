@@ -7,11 +7,12 @@ using System.Text;
 using System.Threading.Tasks;
 using TicketAlarm.Application.Contracts.Persistence;
 using TicketAlarm.Application.Features.Artist.Requests.Commands;
+using TicketAlarm.Application.Features.Commun;
 using TicketAlarm.Domain;
 
 namespace TicketAlarm.Application.Features.Artist.Handlers.Commands
 {
-    public class CreateArtistRequestHandler : BaseHandlerArtist,  IRequestHandler<CreateArtistRequest, int>
+    public class CreateArtistRequestHandler : BaseHandler,  IRequestHandler<CreateArtistRequest, int>
     {
         public CreateArtistRequestHandler(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {

@@ -9,12 +9,13 @@ using TicketAlarm.Application.Contracts.Persistence;
 using TicketAlarm.Application.DTOs.Alarm;
 using TicketAlarm.Application.Features.Alarm.Requests.Commands;
 using TicketAlarm.Application.Features.Alarm.Requests.Queries;
+using TicketAlarm.Application.Features.Commun;
 using TicketAlarm.Application.Responses;
 using TicketAlarm.Domain;
 
 namespace TicketAlarm.Application.Features.Alarm.Handlers.Commands
 {
-    public class CreateAlarmRequestHandler : BaseHandlerAlarm, IRequestHandler<CreateShowRequest, BaseCommandResponse<int>>
+    public class CreateAlarmRequestHandler : BaseHandler, IRequestHandler<CreateShowRequest, BaseCommandResponse<int>>
     {
         public CreateAlarmRequestHandler(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {

@@ -6,17 +6,17 @@ using System.Text;
 using System.Threading.Tasks;
 using TicketAlarm.Application.Contracts.Persistence;
 
-namespace TicketAlarm.Application.Features.Artist.Handlers
+namespace TicketAlarm.Application.Features.Commun
 {
-    public class BaseHandlerArtist
+    public class BaseHandler
     {
         public readonly IUnitOfWork UnitOfWork;
         public readonly IMapper Mapper;
 
-        public BaseHandlerArtist(IUnitOfWork unitOfWork, IMapper mapper)
+        public BaseHandler(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            this.UnitOfWork = unitOfWork;
-            this.Mapper = mapper;
+            UnitOfWork = unitOfWork;
+            Mapper = mapper;
         }
     }
 }

@@ -9,7 +9,6 @@ class MyForm extends Component {
         // const { error } = Joi.validate(this.state.data, this.schema, options);
 
         const { error } =   this.schema.validate(this.state.data);
-        console.log("bbbbbbb", error);
         if (!error) return null;
     
         const errors = {};
@@ -33,7 +32,6 @@ class MyForm extends Component {
         const errors = this.validate();
         this.setState({ errors: errors || {} });
 
-        console.log("aaaaaaaaa",errors);
         if (errors) return;
     
         this.doSubmit();

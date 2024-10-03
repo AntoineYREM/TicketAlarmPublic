@@ -19,7 +19,6 @@ class Alarm extends Component {
     let apiClient = new ApiClient(config.apiEndpoint);
     let showApi = new ShowApi(apiClient);
     showApi.apiShowsIdShowGet(id, (error, show) => {
-      console.log("showshowshowshowshowshow", show);
       if (error == null) this.setState({ show: show });
       else
         toast.error("Une erreur est survenue, veuillez réessayer plus tard.");

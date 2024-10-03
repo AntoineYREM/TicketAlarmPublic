@@ -9,10 +9,11 @@ using TicketAlarm.Application.Contracts.Persistence;
 using TicketAlarm.Application.DTOs.Alarm;
 using TicketAlarm.Application.Features.Alarm.Requests.Commands;
 using TicketAlarm.Application.Features.Alarm.Requests.Queries;
+using TicketAlarm.Application.Features.Commun;
 
 namespace TicketAlarm.Application.Features.Alarm.Handlers.Commands
 {
-    public class UpdateAlarmRequestHandler :  BaseHandlerAlarm, IRequestHandler<UpdateAlarmRequest, AlarmDto>
+    public class UpdateAlarmRequestHandler :  BaseHandler, IRequestHandler<UpdateAlarmRequest, AlarmDto>
     {
         public UpdateAlarmRequestHandler(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {

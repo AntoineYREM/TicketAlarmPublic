@@ -129,6 +129,7 @@ Class | Method | HTTP request | Description
 *TicketAlarmApi.ArtistApi* | [**apiArtistsGet**](docs/ArtistApi.md#apiArtistsGet) | **GET** /api/artists | 
 *TicketAlarmApi.ArtistApi* | [**apiArtistsPost**](docs/ArtistApi.md#apiArtistsPost) | **POST** /api/artists | 
 *TicketAlarmApi.AvailabilityApi* | [**apiAvailabilitysPost**](docs/AvailabilityApi.md#apiAvailabilitysPost) | **POST** /api/availabilitys | 
+*TicketAlarmApi.EmailApi* | [**apiEmailPost**](docs/EmailApi.md#apiEmailPost) | **POST** /api/email | 
 *TicketAlarmApi.ShowApi* | [**apiShowsGet**](docs/ShowApi.md#apiShowsGet) | **GET** /api/shows | 
 *TicketAlarmApi.ShowApi* | [**apiShowsIdShowGet**](docs/ShowApi.md#apiShowsIdShowGet) | **GET** /api/shows/{idShow} | 
 *TicketAlarmApi.ShowApi* | [**apiShowsIdShowPut**](docs/ShowApi.md#apiShowsIdShowPut) | **PUT** /api/shows/{idShow} | 

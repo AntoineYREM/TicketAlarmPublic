@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**idAlarm** | **Number** |  | [optional] 
 **idShow** | **Number** |  | [optional] 
 **mail** | **String** |  | [optional] 
 **phone** | **String** |  | [optional] 

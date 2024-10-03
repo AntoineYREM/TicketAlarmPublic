@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 using TicketAlarm.Application.Contracts.Persistence;
 using TicketAlarm.Application.DTOs.Show;
 using TicketAlarm.Application.DTOs.Show.Validators;
+using TicketAlarm.Application.Features.Commun;
 using TicketAlarm.Application.Features.Show.Requests.Commands;
 
 namespace TicketAlarm.Application.Features.Show.Handlers.Commands
 {
-    public class CreateShowRequestHandler : BaseHandlerShow, IRequestHandler<CreateShowRequest, int>
+    public class CreateShowRequestHandler : BaseHandler, IRequestHandler<CreateShowRequest, int>
     {
         public CreateShowRequestHandler(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {

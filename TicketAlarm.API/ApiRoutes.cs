@@ -21,5 +21,8 @@
 
         public const string AvailabilityBaseUrl = Base + "availabilitys/";
         public const string CreateAvailability = AvailabilityBaseUrl;
+
+        public const string EmailBaseUrl = Base + "email/";
+        public const string SendEmail = EmailBaseUrl;
     }
 }

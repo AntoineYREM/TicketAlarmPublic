@@ -11,6 +11,5 @@ namespace TicketAlarm.Application.DTOs.Availability
     public class AvailabilityDto : BaseDto
     {
         public int IdShow { get; set; }
-        public DateTime DateTimeAvailability { get; set; }
     }
 }

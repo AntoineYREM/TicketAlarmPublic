@@ -12,31 +12,32 @@ class ShowInfo extends Component {
 
   render() {
     const { show, home = false } = this.props;
-    console.log(this.props);
     if (show == null) return;
 
     let linkPart = "";
 
-    var insideHomeLink = "pas dispo"
+    var insideHomeLink = <span><a href={"/alarm/" + show.id}>
+                          Recevoir une alerte
+                        </a>&#x23F0;</span>
     if(show.available)
-      insideHomeLink = "dispo";
+      insideHomeLink = <span><a href={show.url} target="_blank" >
+                            Disponible - Lien billetterie
+                      </a></span>;
 
     if (home) {
       linkPart = (
         <span>
-          <a href={"/alarm/" + show.id}>
-            
+          
             { insideHomeLink }
-            Recevoir une alerte
-          </a>{" "}
-          &#x23F0;
+            
+          
         </span>
       );
     } else {
       linkPart = (
         <span>
           <a href={show.url} target="_blank" >
-            Lien évènement
+            Lien billetterie
           </a>
           &nbsp;&nbsp;&nbsp;
           <a href="/" >
@@ -46,8 +47,6 @@ class ShowInfo extends Component {
       );
     }
 
-    console.log("---------------------",show);
-    console.log("oui");
     this.state.date =  `${this.fixDate(show.dateTimeShow.getDate()) }/${
       this.fixDate(show.dateTimeShow.getMonth()+1)  
     }/${show.dateTimeShow.getFullYear()} ${this.fixDate(show.dateTimeShow.getHours()) }h${

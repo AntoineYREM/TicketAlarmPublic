@@ -47,14 +47,8 @@ class AvailabilityDto {
         if (data) {
             obj = obj || new AvailabilityDto();
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
             if (data.hasOwnProperty('idShow')) {
                 obj['idShow'] = ApiClient.convertToType(data['idShow'], 'Number');
-            }
-            if (data.hasOwnProperty('dateTimeAvailability')) {
-                obj['dateTimeAvailability'] = ApiClient.convertToType(data['dateTimeAvailability'], 'Date');
             }
         }
         return obj;
@@ -76,19 +70,9 @@ class AvailabilityDto {
 
 
 /**
- * @member {Number} id
- */
-AvailabilityDto.prototype['id'] = undefined;
-
-/**
  * @member {Number} idShow
  */
 AvailabilityDto.prototype['idShow'] = undefined;
-
-/**
- * @member {Date} dateTimeAvailability
- */
-AvailabilityDto.prototype['dateTimeAvailability'] = undefined;
 
 
 

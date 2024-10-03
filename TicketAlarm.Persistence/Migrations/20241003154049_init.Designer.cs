@@ -12,7 +12,7 @@ using TicketAlarm.Persistence;
 namespace TicketAlarm.Persistence.Migrations
 {
     [DbContext(typeof(TicketAlarmDbContext))]
-    [Migration("20240920201622_init")]
+    [Migration("20241003154049_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,27 +32,25 @@ namespace TicketAlarm.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<DateTime>("DateTimeMailRequest")
+                    b.Property<DateTime?>("DateTimeMailRequest")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DateTimeMailSent")
+                    b.Property<DateTime?>("DateTimeMailSent")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DateTimeTextRequest")
+                    b.Property<DateTime?>("DateTimeTextRequest")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DateTimeTextSent")
+                    b.Property<DateTime?>("DateTimeTextSent")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("IdShow")
                         .HasColumnType("int");
 
                     b.Property<string>("Mail")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -63,10 +61,6 @@ namespace TicketAlarm.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            DateTimeMailRequest = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateTimeMailSent = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateTimeTextRequest = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateTimeTextSent = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IdShow = 1,
                             Mail = "test@gmail.com",
                             Phone = "+33622334455"
@@ -124,7 +118,7 @@ namespace TicketAlarm.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            DateTimeAvailability = new DateTime(2024, 9, 20, 22, 16, 21, 870, DateTimeKind.Local).AddTicks(8892),
+                            DateTimeAvailability = new DateTime(2024, 10, 3, 17, 40, 49, 656, DateTimeKind.Local).AddTicks(5928),
                             IdShow = 1
                         });
                 });
@@ -167,6 +161,8 @@ namespace TicketAlarm.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("IdArtist");
+
                     b.ToTable("Shows");
 
                     b.HasData(
@@ -182,6 +178,17 @@ namespace TicketAlarm.Persistence.Migrations
                             Title = "Billie Eilish - Hit Me Hard and Soft Tour",
                             Url = "https://www.fnacspectacles.com/event/billie-eilish-hit-me-hard-and-soft-tour-accor-arena-18631108/"
                         });
+                });
+
+            modelBuilder.Entity("TicketAlarm.Domain.Show", b =>
+                {
+                    b.HasOne("TicketAlarm.Domain.Artist", "Artist")
+                        .WithMany()
+                        .HasForeignKey("IdArtist")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Artist");
                 });
 #pragma warning restore 612, 618
         }

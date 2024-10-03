@@ -7,21 +7,21 @@ using System.Threading.Tasks;
 using TicketAlarm.Application.Contracts.Infrastrucutre;
 using TicketAlarm.Application.Contracts.Persistence;
 
-namespace TicketAlarm.Application.Features.Availability.Handlers
+namespace TicketAlarm.Application.Features.Commun
 {
-    public class BaseHandlerAvailability
+    public class BaseHandlerExtended
     {
         public readonly IUnitOfWork UnitOfWork;
         public readonly IMapper Mapper;
         public readonly IEmailSender EmailSender;
+        public readonly IMessageBrokerSender MessageBrokerSender;
 
-        public BaseHandlerAvailability(IUnitOfWork unitOfWork, IEmailSender emailSender , IMapper mapper)
+        public BaseHandlerExtended(IUnitOfWork unitOfWork, IMapper mapper, IEmailSender emailSender, IMessageBrokerSender messageBrokerSender)
         {
             UnitOfWork = unitOfWork;
-            EmailSender = emailSender;
             Mapper = mapper;
+            EmailSender = emailSender;
+            MessageBrokerSender = messageBrokerSender;
         }
-
-
     }
 }

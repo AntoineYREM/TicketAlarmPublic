@@ -119,6 +119,7 @@ Class | Method | HTTP request | Description
 *ArtistApi* | [**ApiArtistsGet**](docs/ArtistApi.md#apiartistsget) | **GET** /api/artists | 
 *ArtistApi* | [**ApiArtistsPost**](docs/ArtistApi.md#apiartistspost) | **POST** /api/artists | 
 *AvailabilityApi* | [**ApiAvailabilitysPost**](docs/AvailabilityApi.md#apiavailabilityspost) | **POST** /api/availabilitys | 
+*EmailApi* | [**ApiEmailPost**](docs/EmailApi.md#apiemailpost) | **POST** /api/email | 
 *ShowApi* | [**ApiShowsGet**](docs/ShowApi.md#apishowsget) | **GET** /api/shows | 
 *ShowApi* | [**ApiShowsIdShowGet**](docs/ShowApi.md#apishowsidshowget) | **GET** /api/shows/{idShow} | 
 *ShowApi* | [**ApiShowsIdShowPut**](docs/ShowApi.md#apishowsidshowput) | **PUT** /api/shows/{idShow} | 

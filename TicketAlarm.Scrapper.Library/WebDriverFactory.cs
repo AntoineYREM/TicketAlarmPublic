@@ -11,19 +11,16 @@ namespace TicketAlarm.Scrapper.Library
 {
     public static class WebDriverFactory
     {
-        public static WebDriver GetDriver(bool local = false)
+        public static WebDriver GetDriver(string? urlDriver)
         {
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.AddArgument("--no-sandbox");
             chromeOptions.AddArgument("--whitelisted-ips=''");
 
-            WebDriver remoteWebDriver;
-            if (local)
-                remoteWebDriver = new ChromeDriver(chromeOptions);
-            else
-                remoteWebDriver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), chromeOptions.ToCapabilities(), new TimeSpan(0, 0, 30));
+            if (urlDriver == null)
+                return  new ChromeDriver(chromeOptions);
 
-            return remoteWebDriver;
+            return new RemoteWebDriver(new Uri(urlDriver), chromeOptions.ToCapabilities(), new TimeSpan(0, 0, 30));
         }
     }
 }

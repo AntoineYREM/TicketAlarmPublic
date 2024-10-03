@@ -1,21 +1,26 @@
-﻿using Microsoft.Extensions.Configuration;
-using System.Timers;
-using TicketAlarm.Scrapper.Library;
-using Microsoft.Extensions.Configuration.Json;
-using Timer = System.Timers.Timer;
+﻿using TicketAlarm.Scrapper.Library;
 
+var environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+var urlApi = (environmentName != null) ? "http://api:80/" : "https://localhost:7015/";
+var urlSelenium = (environmentName != null) ? "http://selenium:4444/wd/hub" : null;
 
-var configuration = new ConfigurationBuilder()
-     .AddJsonFile($"Configuration/appsettings.json");
-
-var config = configuration.Build();
-var apiUrl = config.GetRequiredSection("apiUrl").Value;
-
-if (apiUrl == null) throw new Exception("L'URL de l'API n'a pas pu être déterminée.");
-Scrapper scrapper = new Scrapper(apiUrl);
+IScrapper scrapper = new Scrapper();
 
 while (true)
 {
-    Thread.Sleep(60 * 1000);
     await scrapper.GetAvailabilitys();
+    Thread.Sleep(120 * 1000);
 }
+
+//IHost _host = Host.CreateDefaultBuilder()
+//    .ConfigureAppConfiguration((host, config) =>
+//    {
+//        //var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+//        //config.AddJsonFile("Configuration/appsettings.json");
+//        //if(env != null) config.AddJsonFile($"Configuration/appsettings.{env}.json");
+//    })
+//     .ConfigureServices(services =>
+//     {
+//         services.AddScoped<IScrapper, Scrapper>();
+//     })
+//     .Build();

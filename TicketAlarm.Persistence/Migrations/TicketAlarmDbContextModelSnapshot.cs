@@ -30,27 +30,25 @@ namespace TicketAlarm.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<DateTime>("DateTimeMailRequest")
+                    b.Property<DateTime?>("DateTimeMailRequest")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DateTimeMailSent")
+                    b.Property<DateTime?>("DateTimeMailSent")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DateTimeTextRequest")
+                    b.Property<DateTime?>("DateTimeTextRequest")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DateTimeTextSent")
+                    b.Property<DateTime?>("DateTimeTextSent")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("IdShow")
                         .HasColumnType("int");
 
                     b.Property<string>("Mail")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -61,10 +59,6 @@ namespace TicketAlarm.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            DateTimeMailRequest = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateTimeMailSent = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateTimeTextRequest = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateTimeTextSent = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IdShow = 1,
                             Mail = "test@gmail.com",
                             Phone = "+33622334455"
@@ -122,7 +116,7 @@ namespace TicketAlarm.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            DateTimeAvailability = new DateTime(2024, 9, 26, 13, 24, 43, 354, DateTimeKind.Local).AddTicks(3983),
+                            DateTimeAvailability = new DateTime(2024, 10, 3, 17, 40, 49, 656, DateTimeKind.Local).AddTicks(5928),
                             IdShow = 1
                         });
                 });

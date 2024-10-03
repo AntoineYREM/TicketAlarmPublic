@@ -34,33 +34,17 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailabilityDto" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
         /// <param name="idShow">idShow.</param>
-        /// <param name="dateTimeAvailability">dateTimeAvailability.</param>
-        public AvailabilityDto(int id = default(int), int idShow = default(int), DateTime dateTimeAvailability = default(DateTime))
+        public AvailabilityDto(int idShow = default(int))
         {
-            this.Id = id;
             this.IdShow = idShow;
-            this.DateTimeAvailability = dateTimeAvailability;
         }
-
-        /// <summary>
-        /// Gets or Sets Id
-        /// </summary>
-        [DataMember(Name = "id", EmitDefaultValue = false)]
-        public int Id { get; set; }
 
         /// <summary>
         /// Gets or Sets IdShow
         /// </summary>
         [DataMember(Name = "idShow", EmitDefaultValue = false)]
         public int IdShow { get; set; }
-
-        /// <summary>
-        /// Gets or Sets DateTimeAvailability
-        /// </summary>
-        [DataMember(Name = "dateTimeAvailability", EmitDefaultValue = false)]
-        public DateTime DateTimeAvailability { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -70,9 +54,7 @@ namespace Org.OpenAPITools.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class AvailabilityDto {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdShow: ").Append(IdShow).Append("\n");
-            sb.Append("  DateTimeAvailability: ").Append(DateTimeAvailability).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

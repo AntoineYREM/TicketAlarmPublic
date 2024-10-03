@@ -194,6 +194,37 @@ paths:
           description: Success
       tags:
       - Availability
+  /api/email:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AlarmDto'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/AlarmDto'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/AlarmDto'
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                format: int32
+                type: integer
+            application/json:
+              schema:
+                format: int32
+                type: integer
+            text/json:
+              schema:
+                format: int32
+                type: integer
+          description: Success
+      tags:
+      - Email
   /api/shows:
     get:
       parameters:
@@ -327,9 +358,13 @@ components:
         mail: mail
         phone: phone
         dateTimeMailRequest: 2000-01-23T04:56:07.000+00:00
-        idShow: 0
+        idShow: 6
+        idAlarm: 0
         dateTimeTextRequest: 2000-01-23T04:56:07.000+00:00
       properties:
+        idAlarm:
+          format: int32
+          type: integer
         idShow:
           format: int32
           type: integer
@@ -341,15 +376,19 @@ components:
           type: string
         dateTimeMailRequest:
           format: date-time
+          nullable: true
           type: string
         dateTimeMailSent:
           format: date-time
+          nullable: true
           type: string
         dateTimeTextRequest:
           format: date-time
+          nullable: true
           type: string
         dateTimeTextSent:
           format: date-time
+          nullable: true
           type: string
       type: object
     ArtistDto:
@@ -368,19 +407,11 @@ components:
     AvailabilityDto:
       additionalProperties: false
       example:
-        id: 0
-        dateTimeAvailability: 2000-01-23T04:56:07.000+00:00
-        idShow: 6
+        idShow: 0
       properties:
-        id:
-          format: int32
-          type: integer
         idShow:
           format: int32
           type: integer
-        dateTimeAvailability:
-          format: date-time
-          type: string
       type: object
     ShowDto:
       additionalProperties: false

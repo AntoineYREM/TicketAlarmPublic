@@ -2,20 +2,23 @@
 using Org.OpenAPITools.Api;
 using Org.OpenAPITools.Client;
 using Org.OpenAPITools.Model;
-using static System.Net.WebRequestMethods;
 
 namespace TicketAlarm.Scrapper.Library
 {
-    public partial class Scrapper
+    public partial class Scrapper : IScrapper
     {
         private readonly WebDriver driver;
         private readonly ShowApi showApi;
         private readonly ArtistApi artistApi;
         private readonly AvailabilityApi availabilityApi;
 
-        public Scrapper(string urlApi)
+        public Scrapper()
         {
-            driver = WebDriverFactory.GetDriver(false);
+            var environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            var urlApi = (environmentName != null) ? "http://api:80/" : "https://localhost:7015/";
+            var urlSelenium = (environmentName != null) ? "http://selenium:4444/wd/hub" : null;
+
+            driver = WebDriverFactory.GetDriver(urlSelenium);
             driver.Manage().Timeouts().ImplicitWait = new TimeSpan(0, 0, 5);
             Configuration c = new Configuration();
             c.BasePath = urlApi;
@@ -24,7 +27,7 @@ namespace TicketAlarm.Scrapper.Library
             availabilityApi = new AvailabilityApi(c);
         }
 
-        private async Task<ScrapResult> ScrapEventAsync(string urlEvent, bool fullScrap = true)
+        private ScrapResult ScrapEvent(string urlEvent, bool fullScrap = true)
         {
             driver.Url = urlEvent;
 
@@ -62,15 +65,11 @@ namespace TicketAlarm.Scrapper.Library
                 imageLink = imageLinkTop != "" ? imageLinkTop : $"https://www.fnacspectacles.com{imageLinkBottom}";
             }
 
-
-
             var artistDto = new Org.OpenAPITools.Model.ArtistDto()
             {
                 Name = artistName,
                 UrlPhoto = imageLink
             };
-
-           
 
             var showDto = new Org.OpenAPITools.Model.ShowDto()
             {
@@ -94,32 +93,35 @@ namespace TicketAlarm.Scrapper.Library
 
         public async Task AddShow(string urlShow)
         {
-            var scrapResult =  await ScrapEventAsync(urlShow, true);
-            
+            var scrapResult = ScrapEvent(urlShow, true);
             var idArtist = await artistApi.ApiArtistsPostAsync(scrapResult.ArtistDto);
             scrapResult.ShowDto.IdArtist = idArtist;
-            var idShow = await showApi.ApiShowsPostAsync(scrapResult.ShowDto);
-
-            Console.WriteLine(idShow);
-        } 
+            await showApi.ApiShowsPostAsync(scrapResult.ShowDto);
+        }
 
         public async Task GetAvailabilitys()
         {
             var shows = await showApi.ApiShowsGetAsync(true);
-            foreach(var show in shows)
+            foreach (var show in shows)
             {
-                var scrapResult = await ScrapEventAsync(show.Url, false);
-                if (scrapResult.ShowDto.Available)
+                try
                 {
-                    var result = await availabilityApi.ApiAvailabilitysPostAsync(new AvailabilityDto()
+                    Console.WriteLine($"Le show {show.Id}-{show.Title} va être scrappé.");
+                    var scrapResult = ScrapEvent(show.Url, false);
+                    if (scrapResult.ShowDto.Available)
                     {
-                        DateTimeAvailability = DateTime.Now,
-                        IdShow = show.Id
-                    });
+                        var result = await availabilityApi.ApiAvailabilitysPostAsync(new AvailabilityDto()
+                        {
+                            IdShow = show.Id
+                        });
+                    }
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    Console.WriteLine($"Le show {show.Id} n'a pas pu être scrappé");
                 }
             }
-
         }
-
     }
 }

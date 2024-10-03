@@ -47,6 +47,9 @@ class AlarmDto {
         if (data) {
             obj = obj || new AlarmDto();
 
+            if (data.hasOwnProperty('idAlarm')) {
+                obj['idAlarm'] = ApiClient.convertToType(data['idAlarm'], 'Number');
+            }
             if (data.hasOwnProperty('idShow')) {
                 obj['idShow'] = ApiClient.convertToType(data['idShow'], 'Number');
             }
@@ -94,6 +97,11 @@ class AlarmDto {
 }
 
 
+
+/**
+ * @member {Number} idAlarm
+ */
+AlarmDto.prototype['idAlarm'] = undefined;
 
 /**
  * @member {Number} idShow

@@ -13,7 +13,7 @@ namespace TicketAlarm.Application.Profile
     {
         public MappingProfile()
         {
-            CreateMap<Alarm, AlarmDto>().ReverseMap();
+            CreateMap<Alarm, AlarmDto>().ForMember(a => a.IdAlarm, opt => opt.MapFrom(a => a.Id)).ReverseMap();
             CreateMap<Artist, ArtistDto>().ReverseMap();
             CreateMap<Show, ShowDto>().ReverseMap();
             CreateMap<Availability, AvailabilityDto>().ReverseMap();

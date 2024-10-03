@@ -15,7 +15,7 @@ namespace TicketAlarm.Application.DTOs.Show.Validators
             RuleFor(s => s.IdArtist)
                 .MustAsync(async (id, token) =>
                 {
-                    var artistExist = artistRepository.GetSingleAsync(a => a.Id == id);
+                    var artistExist = await artistRepository.GetSingleAsync(a => a.Id == id);
                     return artistRepository != null;
                 }).WithMessage("{PropertyName} does not exist.");
 

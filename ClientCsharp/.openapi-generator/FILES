@@ -9,6 +9,7 @@ docs/ArtistApi.md
 docs/ArtistDto.md
 docs/AvailabilityApi.md
 docs/AvailabilityDto.md
+docs/EmailApi.md
 docs/ShowApi.md
 docs/ShowDto.md
 git_push.sh
@@ -16,6 +17,7 @@ src/Org.OpenAPITools.Test/Org.OpenAPITools.Test.csproj
 src/Org.OpenAPITools/Api/AlarmApi.cs
 src/Org.OpenAPITools/Api/ArtistApi.cs
 src/Org.OpenAPITools/Api/AvailabilityApi.cs
+src/Org.OpenAPITools/Api/EmailApi.cs
 src/Org.OpenAPITools/Api/ShowApi.cs
 src/Org.OpenAPITools/Client/ApiClient.cs
 src/Org.OpenAPITools/Client/ApiException.cs

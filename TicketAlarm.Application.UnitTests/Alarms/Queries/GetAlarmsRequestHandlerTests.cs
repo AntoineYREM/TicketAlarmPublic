@@ -52,7 +52,7 @@ namespace TicketAlarm.Application.UnitTests.Alarms.Queries
             }, CancellationToken.None);
 
 
-            var alarms = await _alarmRepository.Object.GetAllAsync();
+            var alarms = await _mockUnitOfWork.Object.AlarmRepository.GetAllAsync();
 
             alarms.Count().ShouldBe(2);
             result.Return.ShouldBeOfType<int>();

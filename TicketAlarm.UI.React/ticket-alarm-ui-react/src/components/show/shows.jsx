@@ -16,8 +16,6 @@ class Shows extends Component {
   }
 
   getShows() {
-    console.log("AAAAAAAAAAAAAAAAAAAAAAAAA");
-    console.log(config.apiEndpoint);
     let apiClient = new ApiClient(config.apiEndpoint);
     let showApi = new ShowApi(apiClient);
     let that = this;
@@ -25,29 +23,21 @@ class Shows extends Component {
       this.shows = result;
       this.setState({ shows: this.shows });
     });
-    console.log(this.shows);
   }
 
   getQuarterShow(quarter){
     quarter = quarter;
     let quartierSize = this.state.shows.length / 4;
-    console.log("quartierSizequartierSizequartierSize",quartierSize);
-
     let res =  this.state.shows.filter((elem, index) =>  (index >= (quarter - 1) * quartierSize) && (index < quarter * quartierSize)  ); 
-    console.log(res);
 
     return res;
   }
 
   render() {
-    console.log("AAAAAAAAAAAAAAAAAAAAAAAAA");
-    // this.getShows();
-    console.log(this.shows);
     let resut = null;
 
     let separator = this.state.shows.length / 4 ;
    
-console.log("------9999999999-----",this.getQuarterShow(1));
     return (
       <span>
         <div class="container">

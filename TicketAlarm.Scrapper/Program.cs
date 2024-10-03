@@ -1,12 +1,9 @@
-﻿
+﻿using TicketAlarm.Scrapper.Library;
 
-using TicketAlarm.Scrapper.Library;
-
-Scrapper scrapper = new Scrapper("https://localhost:7015/");
+IScrapper scrapper = new Scrapper();
 
 while (true)
 {
     var urlEvent = Console.ReadLine() ?? "";
     await scrapper.AddShow(urlEvent);
 }
-

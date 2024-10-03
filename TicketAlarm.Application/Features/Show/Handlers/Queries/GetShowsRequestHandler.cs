@@ -8,11 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using TicketAlarm.Application.Contracts.Persistence;
 using TicketAlarm.Application.DTOs.Show;
+using TicketAlarm.Application.Features.Commun;
 using TicketAlarm.Application.Features.Show.Requests.Queries;
 
 namespace TicketAlarm.Application.Features.Show.Handlers.Queries
 {
-    public class GetShowsRequestHandler : BaseHandlerShow ,IRequestHandler<GetShowsRequest, List<ShowDto>>
+    public class GetShowsRequestHandler : BaseHandler ,IRequestHandler<GetShowsRequest, List<ShowDto>>
     {
         public GetShowsRequestHandler(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {

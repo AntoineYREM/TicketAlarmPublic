@@ -12,7 +12,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-Console.WriteLine(builder.Configuration.GetConnectionString("TicketAlarmConnectionString"));
 builder.Services.ConfigureApplicationServices();
 builder.Services.ConfigureInfrasructureServices(builder.Configuration);
 builder.Services.ConfigurePersistenceServices(builder.Configuration);

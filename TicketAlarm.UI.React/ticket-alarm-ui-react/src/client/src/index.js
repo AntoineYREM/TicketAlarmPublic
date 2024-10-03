@@ -20,6 +20,7 @@ import ShowDto from './model/ShowDto';
 import AlarmApi from './api/AlarmApi';
 import ArtistApi from './api/ArtistApi';
 import AvailabilityApi from './api/AvailabilityApi';
+import EmailApi from './api/EmailApi';
 import ShowApi from './api/ShowApi';
 
 
@@ -102,6 +103,12 @@ export {
     * @property {module:api/AvailabilityApi}
     */
     AvailabilityApi,
+
+    /**
+    * The EmailApi service constructor.
+    * @property {module:api/EmailApi}
+    */
+    EmailApi,
 
     /**
     * The ShowApi service constructor.

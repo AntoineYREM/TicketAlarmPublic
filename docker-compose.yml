@@ -26,3 +26,47 @@ services:
     build:
       context: ./
       dockerfile: ScrapperAvailability.Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Docker"
+    depends_on:
+      - selenium
+    restart: on-failure
+  selenium:
+      image: selenium/standalone-chrome:4.23.0
+      container_name: selenium
+      ports:
+        - "7900:7900"
+        - "4444:4444"
+      privileged: true
+      shm_size: 2g
+      healthcheck:
+          test: ["CMD", "wget", "--spider", "http://localhost:4444/grid/api/proxy"] 
+          interval: 10s
+          timeout: 5s
+          retries: 3
+  mqrabbit:
+    image: rabbitmq:3-management-alpine
+    container_name: mqrabbit
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=mypass
+    ports:
+        - "5672:5672"
+        # Web Interface
+        - "15672:15672"
+    healthcheck:
+      test: [ "CMD", "nc", "-z", "localhost", "5672" ]
+      interval: 5s
+      timeout: 15s
+      retries: 1
+  rabbitmqlistener:
+    build:
+      context: ./
+      dockerfile: RabbitMqListener.Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Docker"
+    depends_on:
+      - mqrabbit
+    restart: on-failure
+    stdin_open: true    
+    tty: true

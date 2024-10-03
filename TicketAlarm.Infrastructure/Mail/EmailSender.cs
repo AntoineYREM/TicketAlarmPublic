@@ -3,6 +3,9 @@ using SendGrid;
 using SendGrid.Helpers.Mail;
 using TicketAlarm.Application.Contracts.Infrastrucutre;
 using TicketAlarm.Application.Models;
+using TicketAlarm.Application.Template.Email;
+using TicketAlarm.Domain;
+using HtmlAgilityPack;
 
 namespace TicketAlarm.Infrastructure.Mail
 {
@@ -15,20 +18,18 @@ namespace TicketAlarm.Infrastructure.Mail
             EmailSettings = emailSettings.Value;
         }
 
-
-
         public async Task<bool> SendEmail(Email email)
         {
+            var html = new HtmlDocument();
+            var bodyHtml = email.Body;
             var client = new SendGridClient(EmailSettings.ApiKey);
-            var to = new EmailAddress(email.To);
-            var from = new EmailAddress
-            {
-                Email = EmailSettings.FromAddress,
-                Name = EmailSettings.FromName
-            };
-
-            var message = MailHelper.CreateSingleEmail(from, to, email.Subject, email.Body, email.Body);
-            var response = await client.SendEmailAsync(message);
+            var from = new EmailAddress(EmailSettings.FromAddress, EmailSettings.FromName);
+            var subject = email.Subject;
+            var to = new EmailAddress(email.To, email.To);
+            var plainTextContent = html.DocumentNode.InnerText;
+            var htmlContent = bodyHtml;
+            var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+            var response = await client.SendEmailAsync(msg);
 
             return response.StatusCode == System.Net.HttpStatusCode.OK || response.StatusCode == System.Net.HttpStatusCode.Accepted;
         }

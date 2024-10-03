@@ -16,12 +16,12 @@ namespace TicketAlarm.Persistence.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IdShow = table.Column<int>(type: "int", nullable: false),
-                    Mail = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DateTimeMailRequest = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DateTimeMailSent = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DateTimeTextRequest = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DateTimeTextSent = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    Mail = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DateTimeMailRequest = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    DateTimeMailSent = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    DateTimeTextRequest = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    DateTimeTextSent = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -62,24 +62,30 @@ namespace TicketAlarm.Persistence.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    IdArtist = table.Column<int>(type: "int", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DateTimeShow = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IdFnac = table.Column<int>(type: "int", nullable: false),
                     City = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Arena = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Url = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Available = table.Column<bool>(type: "bit", nullable: false)
+                    Available = table.Column<bool>(type: "bit", nullable: false),
+                    IdArtist = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Shows", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Shows_Artists_IdArtist",
+                        column: x => x.IdArtist,
+                        principalTable: "Artists",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
                 table: "Alarms",
                 columns: new[] { "Id", "DateTimeMailRequest", "DateTimeMailSent", "DateTimeTextRequest", "DateTimeTextSent", "IdShow", "Mail", "Phone" },
-                values: new object[] { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "test@gmail.com", "+33622334455" });
+                values: new object[] { 1, null, null, null, null, 1, "test@gmail.com", "+33622334455" });
 
             migrationBuilder.InsertData(
                 table: "Artists",
@@ -89,12 +95,17 @@ namespace TicketAlarm.Persistence.Migrations
             migrationBuilder.InsertData(
                 table: "Availabilitys",
                 columns: new[] { "Id", "DateTimeAvailability", "IdShow" },
-                values: new object[] { 1, new DateTime(2024, 9, 20, 22, 16, 21, 870, DateTimeKind.Local).AddTicks(8892), 1 });
+                values: new object[] { 1, new DateTime(2024, 10, 3, 17, 40, 49, 656, DateTimeKind.Local).AddTicks(5928), 1 });
 
             migrationBuilder.InsertData(
                 table: "Shows",
                 columns: new[] { "Id", "Arena", "Available", "City", "DateTimeShow", "IdArtist", "IdFnac", "Title", "Url" },
                 values: new object[] { 1, "Accor Arena", false, "Paris", new DateTime(2025, 6, 10, 19, 0, 0, 0, DateTimeKind.Unspecified), 1, 18631108, "Billie Eilish - Hit Me Hard and Soft Tour", "https://www.fnacspectacles.com/event/billie-eilish-hit-me-hard-and-soft-tour-accor-arena-18631108/" });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Shows_IdArtist",
+                table: "Shows",
+                column: "IdArtist");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -103,13 +114,13 @@ namespace TicketAlarm.Persistence.Migrations
                 name: "Alarms");
 
             migrationBuilder.DropTable(
-                name: "Artists");
-
-            migrationBuilder.DropTable(
                 name: "Availabilitys");
 
             migrationBuilder.DropTable(
                 name: "Shows");
+
+            migrationBuilder.DropTable(
+                name: "Artists");
         }
     }
 }
