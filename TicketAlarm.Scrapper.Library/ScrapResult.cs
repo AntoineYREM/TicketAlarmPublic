@@ -8,6 +8,7 @@ namespace TicketAlarm.Scrapper.Library
         {
             public ShowDto ShowDto { get; set; }
             public ArtistDto ArtistDto { get; set; }
+            public string? Screenshot { get; internal set; }
         }
 
     }

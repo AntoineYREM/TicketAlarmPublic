@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TicketAlarm.Application.DTOs.Artist;
@@ -19,6 +20,7 @@ namespace TicketAlarm.API.Controllers
             this.mediator = mediator;
         }
 
+        [Authorize(Roles = "admin")]
         [HttpPost(ApiRoutes.CreateAvailability)]
         public async Task<ActionResult<List<int>>> CreateAvailability(AvailabilityDto availabilityDto)
         {

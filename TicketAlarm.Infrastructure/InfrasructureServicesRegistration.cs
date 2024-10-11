@@ -9,6 +9,7 @@ using TicketAlarm.Application.Contracts.Infrastrucutre;
 using TicketAlarm.Application.Models;
 using TicketAlarm.Infrastructure.Mail;
 using TicketAlarm.Infrastructure.MessageBroker;
+using TicketAlarm.Infrastructure.Token;
 
 namespace TicketAlarm.Infrastructure
 {
@@ -18,8 +19,10 @@ namespace TicketAlarm.Infrastructure
         {
             services.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
             services.Configure<MessageBrokerSettings>(configuration.GetSection("MessageBrokerSettings"));
+            services.Configure<TokenSettings>(configuration.GetSection("Jwt"));
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddTransient<IMessageBrokerSender, MessageBrokerSender>();
+            services.AddTransient<ITokenGenerator, TokenGenerator>();
             return services;
         }
     }

@@ -7,9 +7,10 @@ using TicketAlarm.Domain.Common;
 
 namespace TicketAlarm.Domain
 {
-    public class Availability : BaseDomainEntify
+    public class Availability : BaseDomainEntity
     {
         public int IdShow { get; set; }
         public DateTime DateTimeAvailability { get; set; }
+        public string? Screenshot { get; set; }
     }
 }

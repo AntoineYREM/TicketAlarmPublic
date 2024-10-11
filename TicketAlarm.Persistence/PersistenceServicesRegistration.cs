@@ -29,6 +29,7 @@ namespace TicketAlarm.Persistence
             services.AddScoped<IShowRepository, ShowRepository>();
             services.AddScoped<IAlarmRepository, AlarmRepository>();
             services.AddScoped<IAvailabilityRepository, AvailabilityRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
 
             return services;
         }

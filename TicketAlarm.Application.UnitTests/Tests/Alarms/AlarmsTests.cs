@@ -10,18 +10,17 @@ using TicketAlarm.Application.Profile;
 using TicketAlarm.Application.UnitTests.Mocks;
 using TicketAlarm.Domain;
 
-namespace TicketAlarm.Application.UnitTests.Alarms.Queries
+namespace TicketAlarm.Application.UnitTests.Tests.Alarms
 {
-    public class GetAlarmsRequestHandlerTests
+    public class AlarmsTests
     {
         private readonly IMapper _mapper;
-        private readonly Mock<IAlarmRepository> _alarmRepository;
         private readonly Mock<IUnitOfWork> _mockUnitOfWork;
 
-        public GetAlarmsRequestHandlerTests()
+        public AlarmsTests()
         {
             _mockUnitOfWork = MockUnitOfWork.GetUnitOfWork();
-            
+
             var mapperConfiguration = new MapperConfiguration(c =>
             {
                 c.AddProfile<MappingProfile>();
@@ -43,12 +42,14 @@ namespace TicketAlarm.Application.UnitTests.Alarms.Queries
         public async Task CreateAlarmRequest()
         {
             var handler = new CreateAlarmRequestHandler(_mockUnitOfWork.Object, _mapper);
-            var result = await handler.Handle(new Features.Alarm.Requests.Commands.CreateShowRequest() { AlarmDto = new AlarmDto()
+            var result = await handler.Handle(new Features.Alarm.Requests.Commands.CreateShowRequest()
             {
-                IdShow = 1,
-                Mail = "test2@gmail.com",
-                Phone = "+33622334466",
-            }
+                AlarmDto = new AlarmDto()
+                {
+                    IdShow = 1,
+                    Mail = "test2@gmail.com",
+                    Phone = "+33622334466",
+                }
             }, CancellationToken.None);
 
 
@@ -56,6 +57,30 @@ namespace TicketAlarm.Application.UnitTests.Alarms.Queries
 
             alarms.Count().ShouldBe(2);
             result.Return.ShouldBeOfType<int>();
+        }
+
+        [Fact]
+        public async Task UpdateAlarmRequest()
+        {
+            var handler = new UpdateAlarmRequestHandler(_mockUnitOfWork.Object, _mapper);
+            var updatedAlarm = new AlarmDto()
+            {
+                IdAlarm = 1,
+                IdShow = 1,
+                Mail = "test-updated@gmail.com",
+                Phone = "+33622334499",
+            };
+
+            var result = await handler.Handle(new Features.Alarm.Requests.Commands.UpdateAlarmRequest()
+            {
+                Id = 1,
+                AlarmDto = updatedAlarm
+            }, CancellationToken.None);
+
+
+            var alarm = await _mockUnitOfWork.Object.AlarmRepository.GetSingleAsync(a => a.Id == 1);
+
+            _mapper.Map<AlarmDto>(alarm).Mail.ShouldBeEquivalentTo(updatedAlarm.Mail);
         }
     }
 }

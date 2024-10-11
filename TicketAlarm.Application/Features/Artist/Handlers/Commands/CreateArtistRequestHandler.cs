@@ -21,9 +21,17 @@ namespace TicketAlarm.Application.Features.Artist.Handlers.Commands
         public async Task<int> Handle(CreateArtistRequest request, CancellationToken cancellationToken)
         {
             var artist = Mapper.Map<Domain.Artist>(request.ArtistDto);
-            var createdArtist = await UnitOfWork.ArtistRepository.AddAsync(artist);
-            await UnitOfWork.Save();
-            return createdArtist.Id;
+
+            var artistFromDb = await UnitOfWork.ArtistRepository.GetSingleAsync(a => a.Name == artist.Name);
+            if (artistFromDb == null)
+            {
+                artist = await UnitOfWork.ArtistRepository.AddAsync(artist);
+                await UnitOfWork.Save();
+            }
+            else
+                artist = artistFromDb;
+            
+            return artist.Id;
         }
     }
 }

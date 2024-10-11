@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TicketAlarm.Application.DTOs.Artist;
@@ -25,6 +26,7 @@ namespace TicketAlarm.API.Controllers
             return Ok(artists);
         }
 
+        [Authorize(Roles = "admin")]
         [HttpPost(ApiRoutes.CreateArtist)]
         public async Task<ActionResult<int>> CreateArtist(ArtistDto artistDto)
         {

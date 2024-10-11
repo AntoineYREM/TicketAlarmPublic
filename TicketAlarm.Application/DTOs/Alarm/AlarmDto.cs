@@ -11,8 +11,8 @@ namespace TicketAlarm.Application.DTOs.Alarm
     {
         public int IdAlarm { get; set; }
         public int IdShow { get; set; }
-        public string Mail { get; set; }
-        public string Phone { get; set; }
+        public string? Mail { get; set; }
+        public string? Phone { get; set; }
         public DateTime? DateTimeMailRequest { get; set; }
         public DateTime? DateTimeMailSent { get; set; }
         public DateTime? DateTimeTextRequest { get; set; }

@@ -54,7 +54,7 @@ namespace TicketAlarm.Scrapper.Library
             var minute = Convert.ToInt32(showDateBrut.Split("/")[2].Split(" ")[1].Split(":")[1]);
             var dateTimeShow = new DateTime(year, month, day, hour, minute, 0);
             var disponible = !driver.FindElements(By.ClassName("evi-widget-subscription")).Any();
-
+            var screenshot = driver.GetScreenshot();
 
             var imageLink = "";
             if (fullScrap)
@@ -86,7 +86,8 @@ namespace TicketAlarm.Scrapper.Library
             return new ScrapResult()
             {
                 ArtistDto = artistDto,
-                ShowDto = showDto
+                ShowDto = showDto,
+                Screenshot = screenshot.AsBase64EncodedString
             };
         }
 
@@ -108,13 +109,20 @@ namespace TicketAlarm.Scrapper.Library
                 {
                     Console.WriteLine($"Le show {show.Id}-{show.Title} va être scrappé.");
                     var scrapResult = ScrapEvent(show.Url, false);
-                    if (scrapResult.ShowDto.Available)
+
+                    if (scrapResult.ShowDto.Available != show.Available)
                     {
-                        var result = await availabilityApi.ApiAvailabilitysPostAsync(new AvailabilityDto()
+                        if (scrapResult.ShowDto.Available)
                         {
-                            IdShow = show.Id
-                        });
-                    }
+                            var result = await availabilityApi.ApiAvailabilitysPostAsync(new AvailabilityDto()
+                            {
+                                IdShow = show.Id,
+                                Screenshot = scrapResult.Screenshot
+                            });
+                        }
+
+                        await showApi.ApiShowsIdShowPutAsync(show.Id, scrapResult.ShowDto);
+                    }                     
                 }
                 catch(Exception e)
                 {

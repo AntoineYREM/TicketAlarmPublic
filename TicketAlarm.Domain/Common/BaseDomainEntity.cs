@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TicketAlarm.Domain.Common
 {
-    public class BaseDomainEntify
+    public class BaseDomainEntity
     {
         public int Id { get; set; }
     }

@@ -7,7 +7,7 @@ using TicketAlarm.Domain.Common;
 
 namespace TicketAlarm.Domain
 {
-    public class Show : BaseDomainEntify
+    public class Show : BaseDomainEntity
     {
        
         public string Title { get; set; }

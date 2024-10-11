@@ -9,19 +9,17 @@ using TicketAlarm.Application.Contracts.Persistence;
 
 namespace TicketAlarm.Application.Features.Commun
 {
-    public class BaseHandlerExtended
+    public class BaseHandlerExtended : BaseHandler
     {
-        public readonly IUnitOfWork UnitOfWork;
-        public readonly IMapper Mapper;
         public readonly IEmailSender EmailSender;
         public readonly IMessageBrokerSender MessageBrokerSender;
+        public readonly ITokenGenerator TokenGenerator;
 
-        public BaseHandlerExtended(IUnitOfWork unitOfWork, IMapper mapper, IEmailSender emailSender, IMessageBrokerSender messageBrokerSender)
+        public BaseHandlerExtended(IUnitOfWork unitOfWork, IMapper mapper, IEmailSender emailSender, IMessageBrokerSender messageBrokerSender, ITokenGenerator tokenGenerator) : base(unitOfWork, mapper)
         {
-            UnitOfWork = unitOfWork;
-            Mapper = mapper;
             EmailSender = emailSender;
             MessageBrokerSender = messageBrokerSender;
+            TokenGenerator = tokenGenerator;
         }
     }
 }

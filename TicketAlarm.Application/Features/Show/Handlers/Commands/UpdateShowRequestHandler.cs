@@ -16,6 +16,8 @@ namespace TicketAlarm.Application.Features.Show.Handlers.Commands
         public async Task<ShowDto> Handle(UpdateShowRequest request, CancellationToken cancellationToken)
         {
             var show = await UnitOfWork.ShowRepository.GetSingleAsync(a => a.Id == request.Id);
+            show.Available = request.ShowDto.Available;
+            show.DateTimeShow = request.ShowDto.DateTimeShow;
             show = UnitOfWork.ShowRepository.Update(show);
             return Mapper.Map<ShowDto>(show);
         }

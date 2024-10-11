@@ -13,7 +13,7 @@ namespace TicketAlarm.Application.Features.Message.Handlers.Commands
 {
     public class SendEmailRequestHandler : BaseHandlerExtended, IRequestHandler<SendEmailRequest, bool>
     {
-        public SendEmailRequestHandler(IUnitOfWork unitOfWork, IMapper mapper, IEmailSender emailSender, IMessageBrokerSender messageBrokerSender) : base(unitOfWork, mapper, emailSender, messageBrokerSender)
+        public SendEmailRequestHandler(IUnitOfWork unitOfWork, IMapper mapper, IEmailSender emailSender, IMessageBrokerSender messageBrokerSender, ITokenGenerator tokenGenerator) : base(unitOfWork, mapper, emailSender, messageBrokerSender, tokenGenerator)
         {
         }
 
@@ -21,7 +21,7 @@ namespace TicketAlarm.Application.Features.Message.Handlers.Commands
         {
             var alarmInformation = request.AlarmInformation;
 
-            var alarm = UnitOfWork.AlarmRepository.GetSingle(a => a.Id == alarmInformation.IdAlarm);
+            var alarm =  await UnitOfWork.AlarmRepository.GetSingleAsync(a => a.Id == alarmInformation.IdAlarm);
             alarm.DateTimeMailSent = DateTime.UtcNow;
             UnitOfWork.AlarmRepository.Update(alarm);
 

@@ -24,11 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Alarms\Commands\" />
-    <Folder Include="Shows\Queries\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\TicketAlarm.Application\TicketAlarm.Application.csproj" />
   </ItemGroup>
 

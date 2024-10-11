@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TicketAlarm.Application.DTOs.Alarm;
 using TicketAlarm.Application.DTOs.Show;
@@ -18,6 +19,7 @@ namespace TicketAlarm.API.Controllers
             this.mediator = mediator;
         }
 
+        [Authorize(Roles = "admin")]
         [HttpPost(ApiRoutes.SendEmail)]
         public async Task<ActionResult<int>> SendEmail(AlarmDto alarmDto)
         {

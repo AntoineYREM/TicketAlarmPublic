@@ -407,11 +407,15 @@ components:
     AvailabilityDto:
       additionalProperties: false
       example:
+        screenshot: screenshot
         idShow: 0
       properties:
         idShow:
           format: int32
           type: integer
+        screenshot:
+          nullable: true
+          type: string
       type: object
     ShowDto:
       additionalProperties: false

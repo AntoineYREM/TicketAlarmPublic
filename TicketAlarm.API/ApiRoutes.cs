@@ -24,5 +24,8 @@
 
         public const string EmailBaseUrl = Base + "email/";
         public const string SendEmail = EmailBaseUrl;
+
+        public const string UserBaseUrl = Base + "users/";
+        public const string Authenticate = "authenticate";
     }
 }

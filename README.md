@@ -50,3 +50,25 @@ docker run -d -p 4444:4444 -p 7900:7900 -e SE_NODE_MAX_SESSIONS=5  --shm-size="2
 add-migration "nom migration" 
 update-database
 ```
+
+
+### SonarQube
+
+
+
+```sh
+dotnet sonarscanner begin /k:"TicketAlarm" /d:sonar.host.url="http://localhost:9000"  /d:sonar.token="sqp_2be6fcb39963a327a752fa7c23d5d883b649d954" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml /d:sonar.scanner.scanAll=false
+dotnet build --no-incremental
+dotnet-coverage collect "dotnet test" -f xml -o "coverage.xml"
+dotnet sonarscanner end /d:sonar.token="sqp_2be6fcb39963a327a752fa7c23d5d883b649d954"
+```
+
+
+### Notes
+
+```sh
+DELETE FROM Availabilitys
+DELETE FROM Shows
+DELETE FROM Artists
+DELETE FROM Alarms
+```

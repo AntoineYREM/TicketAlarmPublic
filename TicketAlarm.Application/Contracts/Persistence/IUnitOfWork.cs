@@ -13,6 +13,7 @@ namespace TicketAlarm.Application.Contracts.Persistence
         IArtistRepository ArtistRepository { get; }
         IAvailabilityRepository AvailabilityRepository { get; }
         IShowRepository ShowRepository { get; }
+        IUserRepository UserRepository { get; }
 
         Task Save();
     }

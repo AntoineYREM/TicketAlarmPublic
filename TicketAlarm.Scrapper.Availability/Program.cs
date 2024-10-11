@@ -9,18 +9,5 @@ IScrapper scrapper = new Scrapper();
 while (true)
 {
     await scrapper.GetAvailabilitys();
-    Thread.Sleep(120 * 1000);
+    Thread.Sleep(5 * 60 * 1000);
 }
-
-//IHost _host = Host.CreateDefaultBuilder()
-//    .ConfigureAppConfiguration((host, config) =>
-//    {
-//        //var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
-//        //config.AddJsonFile("Configuration/appsettings.json");
-//        //if(env != null) config.AddJsonFile($"Configuration/appsettings.{env}.json");
-//    })
-//     .ConfigureServices(services =>
-//     {
-//         services.AddScoped<IScrapper, Scrapper>();
-//     })
-//     .Build();

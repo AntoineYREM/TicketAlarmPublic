@@ -13,6 +13,7 @@ namespace TicketAlarm.Persistence.Repositories
         private IArtistRepository _artistRepository;
         private IAvailabilityRepository _availabilityRepository;    
         private IShowRepository _showRepository;
+        private IUserRepository _userRepository;
 
         private  TicketAlarmDbContext _context { get; }
         public UnitOfWork(TicketAlarmDbContext context)
@@ -27,6 +28,8 @@ namespace TicketAlarm.Persistence.Repositories
         public IAvailabilityRepository AvailabilityRepository => _availabilityRepository ??= new AvailabilityRepository(_context);
 
         public IShowRepository ShowRepository => _showRepository ??= new ShowRepository(_context);
+
+        public IUserRepository UserRepository => _userRepository ??= new UserRepository(_context);
 
 
         public async Task Save()

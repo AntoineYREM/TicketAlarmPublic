@@ -23,6 +23,8 @@
     <Folder Include="Features\Availability\Requests\Queries\" />
     <Folder Include="Features\Message\Handlers\Queries\" />
     <Folder Include="Features\Message\Requests\Queries\" />
+    <Folder Include="Features\User\Handlers\Commands\" />
+    <Folder Include="Features\User\Requests\Commands\" />
   </ItemGroup>
 
 </Project>

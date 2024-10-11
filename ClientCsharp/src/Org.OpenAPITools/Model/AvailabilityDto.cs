@@ -35,9 +35,11 @@ namespace Org.OpenAPITools.Model
         /// Initializes a new instance of the <see cref="AvailabilityDto" /> class.
         /// </summary>
         /// <param name="idShow">idShow.</param>
-        public AvailabilityDto(int idShow = default(int))
+        /// <param name="screenshot">screenshot.</param>
+        public AvailabilityDto(int idShow = default(int), string screenshot = default(string))
         {
             this.IdShow = idShow;
+            this.Screenshot = screenshot;
         }
 
         /// <summary>
@@ -45,6 +47,12 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         [DataMember(Name = "idShow", EmitDefaultValue = false)]
         public int IdShow { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Screenshot
+        /// </summary>
+        [DataMember(Name = "screenshot", EmitDefaultValue = true)]
+        public string Screenshot { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -55,6 +63,7 @@ namespace Org.OpenAPITools.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class AvailabilityDto {\n");
             sb.Append("  IdShow: ").Append(IdShow).Append("\n");
+            sb.Append("  Screenshot: ").Append(Screenshot).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TicketAlarm.Application.DTOs.Alarm;
 using TicketAlarm.Application.DTOs.Show;
@@ -41,6 +42,7 @@ namespace TicketAlarm.API.Controllers
             return Ok(idAlarm);
         }
 
+        [Authorize(Roles = "admin")]
         [HttpPut(ApiRoutes.UpdateAlarm)]
         public async Task<ActionResult<ShowDto>> UpdateAlarm(int idAlarm, AlarmDto alarmDto)
         {

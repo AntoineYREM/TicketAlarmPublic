@@ -70,3 +70,13 @@ services:
     restart: on-failure
     stdin_open: true    
     tty: true
+
+  sonarqube:
+    container_name: sonarqube
+    image: sonarqube
+    environment:
+      - SONARQUBE_JDBC_USERNAME=SA
+      - SONARQUBE_JDBC_PASSWORD=yourStrong(!)Password
+      - SONARQUBE_JDBC_URL=jdbc:sqlserver://localhost:1433
+    ports:
+      - 9000:9000

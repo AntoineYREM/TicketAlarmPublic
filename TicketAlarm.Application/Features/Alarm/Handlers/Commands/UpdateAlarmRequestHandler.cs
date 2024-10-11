@@ -22,7 +22,9 @@ namespace TicketAlarm.Application.Features.Alarm.Handlers.Commands
         public async Task<AlarmDto> Handle(UpdateAlarmRequest request, CancellationToken cancellationToken)
         {
             var alarm = await UnitOfWork.AlarmRepository.GetSingleAsync(a => a.Id == request.Id);
+            alarm.Mail = request.AlarmDto.Mail;
             alarm = UnitOfWork.AlarmRepository.Update(alarm);
+            await UnitOfWork.Save();
             return Mapper.Map<AlarmDto>(alarm);
         }
     }

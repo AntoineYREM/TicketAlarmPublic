@@ -23,7 +23,7 @@ namespace TicketAlarm.Application.Features.Availability.Handlers.Commands
 {
     public class CreateAvailabilityRequestHandler : BaseHandlerExtended, IRequestHandler<CreateAvailabilityRequest, int>
     {
-        public CreateAvailabilityRequestHandler(IUnitOfWork unitOfWork, IMapper mapper, IEmailSender emailSender, IMessageBrokerSender messageBrokerSender) : base(unitOfWork, mapper, emailSender, messageBrokerSender)
+        public CreateAvailabilityRequestHandler(IUnitOfWork unitOfWork, IMapper mapper, IEmailSender emailSender, IMessageBrokerSender messageBrokerSender, ITokenGenerator tokenGenerator) : base(unitOfWork, mapper, emailSender, messageBrokerSender, tokenGenerator)
         {
         }
 
@@ -35,7 +35,9 @@ namespace TicketAlarm.Application.Features.Availability.Handlers.Commands
             if (validatorResult.IsValid == false)
                 throw new Exception();
 
+            
             var availability = Mapper.Map<Domain.Availability>(request.AvailabilityDto);
+            availability.DateTimeAvailability = DateTime.UtcNow;
             availability = UnitOfWork.AvailabilityRepository.AddAsync(availability).Result;
  
             // TODO: Changer la condition de date

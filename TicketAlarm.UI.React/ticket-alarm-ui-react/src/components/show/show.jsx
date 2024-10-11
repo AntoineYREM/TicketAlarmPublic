@@ -7,7 +7,7 @@ class Show extends Component {
         const { show } = this.props;
 
         return (<h5> {show.title} 
-         <a>
+                <a>
                   <Link class="nav-link" to="/alarm/1">{show.id}</Link>
                 </a>
          

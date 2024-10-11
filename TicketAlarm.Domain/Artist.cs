@@ -2,7 +2,7 @@
 
 namespace TicketAlarm.Domain
 {
-    public class Artist : BaseDomainEntify
+    public class Artist : BaseDomainEntity
     {
         public string Name { get; set; }
         public string UrlPhoto { get; set; }

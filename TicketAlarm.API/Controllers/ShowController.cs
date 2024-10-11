@@ -1,8 +1,11 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TicketAlarm.Application.DTOs.Show;
+using TicketAlarm.Application.DTOs.User;
 using TicketAlarm.Application.Features.Show.Requests.Commands;
 using TicketAlarm.Application.Features.Show.Requests.Queries;
+using TicketAlarm.Application.Features.User.Requests.Queries;
 
 namespace TicketAlarm.API.Controllers
 {
