@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
-using System.Text.Unicode;
 using TicketAlarm.API.ExceptionMiddleware;
 using TicketAlarm.Application;
 using TicketAlarm.Infrastructure;
@@ -91,3 +90,5 @@ app.UseMiddleware<ExceptionMiddleware>();
 app.UseCors("CorsPolicy");
 
 app.Run();
+
+public partial class Program { }

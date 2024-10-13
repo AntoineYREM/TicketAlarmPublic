@@ -22,7 +22,6 @@ namespace TicketAlarm.Persistence.Configuration.Entities
             });
 
             builder.HasKey(a => a.Id);
-            builder.Property(a => a.Screenshot).HasColumnType("varchar(MAX)");
         }
     }
 }

@@ -19,12 +19,15 @@ namespace TicketArtist.Application.UnitTests.Tests.MessagesTests
         private readonly Mock<IUnitOfWork> _mockUnitOfWork;
         private readonly Mock<TicketAlarm.Application.Contracts.Infrastrucutre.IEmailSender> _mockEmailSender;
         private readonly Mock<IMessageBrokerSender> _mockMessageBrokerSender;
+        private readonly Mock<ITokenGenerator> _mockTokenGenerator;
+
 
         public MessagesTests()
         {
             _mockUnitOfWork = MockUnitOfWork.GetUnitOfWork();
             _mockMessageBrokerSender = MockMessageBrokerSender.GetMessageBrocker();
             _mockEmailSender = MockEmailSender.GetEmailSender();
+            _mockTokenGenerator = MockTokenGenerator.GetTokenGenerator();
 
             var mapperConfiguration = new MapperConfiguration(c =>
             {
@@ -36,7 +39,7 @@ namespace TicketArtist.Application.UnitTests.Tests.MessagesTests
         [Fact]
         public async Task CreateMessageRequest()
         {
-            var handler = new SendEmailRequestHandler(_mockUnitOfWork.Object, _mapper, _mockEmailSender.Object, _mockMessageBrokerSender.Object);
+            var handler = new SendEmailRequestHandler(_mockUnitOfWork.Object, _mapper, _mockEmailSender.Object, _mockMessageBrokerSender.Object, _mockTokenGenerator.Object);
             var result = await handler.Handle(new SendEmailRequest
             {
                 AlarmInformation = new()

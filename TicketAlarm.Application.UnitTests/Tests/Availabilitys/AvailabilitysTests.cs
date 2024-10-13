@@ -19,11 +19,13 @@ namespace TicketArtist.Application.UnitTests.Tests.Availabilitys
         private readonly Mock<IUnitOfWork> _mockUnitOfWork;
         private readonly Mock<TicketAlarm.Application.Contracts.Infrastrucutre.IEmailSender> _mockEmailSender;
         private readonly Mock<IMessageBrokerSender> _mockMessageBrokerSender;
+        private readonly Mock<ITokenGenerator> _mockTokenGenerator;
 
         public AvailabilitysTests()
         {
             _mockUnitOfWork = MockUnitOfWork.GetUnitOfWork();
             _mockMessageBrokerSender = MockMessageBrokerSender.GetMessageBrocker();
+            _mockTokenGenerator = MockTokenGenerator.GetTokenGenerator();
             _mockEmailSender = MockEmailSender.GetEmailSender();
 
             var mapperConfiguration = new MapperConfiguration(c =>
@@ -36,7 +38,7 @@ namespace TicketArtist.Application.UnitTests.Tests.Availabilitys
         [Fact]
         public async Task CreateAvailabilityRequest()
         {
-            var handler = new CreateAvailabilityRequestHandler(_mockUnitOfWork.Object, _mapper, _mockEmailSender.Object, _mockMessageBrokerSender.Object);
+            var handler = new CreateAvailabilityRequestHandler(_mockUnitOfWork.Object, _mapper, _mockEmailSender.Object, _mockMessageBrokerSender.Object, _mockTokenGenerator.Object);
             var result = await handler.Handle(new CreateAvailabilityRequest
             {
                 AvailabilityDto = new()

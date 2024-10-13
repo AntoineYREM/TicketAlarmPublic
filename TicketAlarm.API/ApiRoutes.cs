@@ -16,7 +16,7 @@
 
         public const string AlarmBaseUrl = Base + "alarms/";
         public const string UpdateAlarm = AlarmBaseUrl + "{idAlarm}";
-        public const string GetAlarms = AlarmBaseUrl;
+        public const string GetAlarms = AlarmBaseUrl + "{idShow}";
         public const string CreateAlarm = AlarmBaseUrl;
 
         public const string AvailabilityBaseUrl = Base + "availabilitys/";
