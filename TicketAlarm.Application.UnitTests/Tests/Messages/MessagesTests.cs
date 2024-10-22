@@ -37,7 +37,7 @@ namespace TicketArtist.Application.UnitTests.Tests.MessagesTests
         }
 
         [Fact]
-        public async Task CreateMessageRequest()
+        public async Task Create_Message_ReturnsCorrectResults()
         {
             var handler = new SendEmailRequestHandler(_mockUnitOfWork.Object, _mapper, _mockEmailSender.Object, _mockMessageBrokerSender.Object, _mockTokenGenerator.Object);
             var result = await handler.Handle(new SendEmailRequest

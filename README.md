@@ -1,4 +1,4 @@
-# Ticket Alarm V0.5
+# Ticket Alarm V0.6
 ![](https://github.com/AntoineYREM/TicketAlarm/blob/master/demo-v0.gif)
 
 
@@ -29,8 +29,7 @@ http://localhost:15672/
 
 ### Test 
 Les tests unitaires se trouvent dans le projet "TicketAlarm.Application.UnitTests"
-
-Les tests d'intégration se trouvent dans le projet "TicketAlarm.API.IntegrationTests"
+LEs tests d'intégration se trouvent dans le projet "TicketAlarm.API.IntegrationTests"
 
 ### Docker 
 ```sh

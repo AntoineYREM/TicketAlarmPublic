@@ -1,58 +1,13 @@
-# TicketAlarmApi.AlarmApi
+# TicketAlarm.AlarmApi
 
 All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiAlarmsGet**](AlarmApi.md#apiAlarmsGet) | **GET** /api/alarms | 
 [**apiAlarmsIdAlarmPut**](AlarmApi.md#apiAlarmsIdAlarmPut) | **PUT** /api/alarms/{idAlarm} | 
+[**apiAlarmsIdShowGet**](AlarmApi.md#apiAlarmsIdShowGet) | **GET** /api/alarms/{idShow} | 
 [**apiAlarmsPost**](AlarmApi.md#apiAlarmsPost) | **POST** /api/alarms | 
 
-
-
-## apiAlarmsGet
-
-> [ShowDto] apiAlarmsGet(opts)
-
-
-
-### Example
-
-```javascript
-import TicketAlarmApi from 'ticket_alarm_api';
-
-let apiInstance = new TicketAlarmApi.AlarmApi();
-let opts = {
-  'idShow': 56 // Number | 
-};
-apiInstance.apiAlarmsGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **idShow** | **Number**|  | [optional] 
-
-### Return type
-
-[**[ShowDto]**](ShowDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
 
 
 ## apiAlarmsIdAlarmPut
@@ -64,12 +19,18 @@ No authorization required
 ### Example
 
 ```javascript
-import TicketAlarmApi from 'ticket_alarm_api';
+import TicketAlarm from 'ticket_alarm';
+let defaultClient = TicketAlarm.ApiClient.instance;
+// Configure API key authorization: Bearer
+let Bearer = defaultClient.authentications['Bearer'];
+Bearer.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new TicketAlarmApi.AlarmApi();
+let apiInstance = new TicketAlarm.AlarmApi();
 let idAlarm = 56; // Number | 
 let opts = {
-  'alarmDto': new TicketAlarmApi.AlarmDto() // AlarmDto | 
+  'alarmDto': new TicketAlarm.AlarmDto() // AlarmDto | 
 };
 apiInstance.apiAlarmsIdAlarmPut(idAlarm, opts, (error, data, response) => {
   if (error) {
@@ -94,11 +55,60 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: application/json, text/json, application/*+json
+- **Accept**: text/plain, application/json, text/json
+
+
+## apiAlarmsIdShowGet
+
+> [ShowDto] apiAlarmsIdShowGet(idShow)
+
+
+
+### Example
+
+```javascript
+import TicketAlarm from 'ticket_alarm';
+let defaultClient = TicketAlarm.ApiClient.instance;
+// Configure API key authorization: Bearer
+let Bearer = defaultClient.authentications['Bearer'];
+Bearer.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer.apiKeyPrefix = 'Token';
+
+let apiInstance = new TicketAlarm.AlarmApi();
+let idShow = 56; // Number | 
+apiInstance.apiAlarmsIdShowGet(idShow, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **idShow** | **Number**|  | 
+
+### Return type
+
+[**[ShowDto]**](ShowDto.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: text/plain, application/json, text/json
 
 
@@ -111,11 +121,17 @@ No authorization required
 ### Example
 
 ```javascript
-import TicketAlarmApi from 'ticket_alarm_api';
+import TicketAlarm from 'ticket_alarm';
+let defaultClient = TicketAlarm.ApiClient.instance;
+// Configure API key authorization: Bearer
+let Bearer = defaultClient.authentications['Bearer'];
+Bearer.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new TicketAlarmApi.AlarmApi();
+let apiInstance = new TicketAlarm.AlarmApi();
 let opts = {
-  'alarmDto': new TicketAlarmApi.AlarmDto() // AlarmDto | 
+  'alarmDto': new TicketAlarm.AlarmDto() // AlarmDto | 
 };
 apiInstance.apiAlarmsPost(opts, (error, data, response) => {
   if (error) {
@@ -139,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 

@@ -33,7 +33,7 @@ namespace TicketAlarm.Application.UnitTests.Tests.Shows
         }
 
         [Fact]
-        public async Task CreateWrongShowRequest()
+        public async Task Create_Show_ReturnsError()
         {
             var handler = new CreateShowRequestHandler(_unitOfWorkmock.Object, _mapper);
 
@@ -57,7 +57,7 @@ namespace TicketAlarm.Application.UnitTests.Tests.Shows
         }
 
         [Fact]
-        public async Task CreateShowRequest()
+        public async Task Create_Show_ReturnsCorrectResults()
         {
             var handler = new CreateShowRequestHandler(_unitOfWorkmock.Object, _mapper);
             var result = await handler.Handle(new CreateShowRequest()
@@ -83,7 +83,7 @@ namespace TicketAlarm.Application.UnitTests.Tests.Shows
         }
 
         [Fact]
-        public async Task UpdateShowRequest()
+        public async Task Update_Show_ReturnsCorrectResults()
         {
             var handler = new UpdateShowRequestHandler(_unitOfWorkmock.Object, _mapper);
             var result = await handler.Handle(new UpdateShowRequest()
@@ -110,7 +110,7 @@ namespace TicketAlarm.Application.UnitTests.Tests.Shows
         }
 
         [Fact]
-        public async Task GetShowRequest()
+        public async Task Get_Show_ReturnsCorrectResults()
         {
             var handler = new GetShowRequestHandler(_unitOfWorkmock.Object, _mapper);
             var result = await handler.Handle(new GetShowRequest()
@@ -123,7 +123,7 @@ namespace TicketAlarm.Application.UnitTests.Tests.Shows
         }
 
         [Fact]
-        public async Task GetShowsRequest()
+        public async Task Get_Shows_ReturnsCorrectResults()
         {
             var handler = new GetShowsRequestHandler(_unitOfWorkmock.Object, _mapper);
             var result = await handler.Handle(new GetShowsRequest()

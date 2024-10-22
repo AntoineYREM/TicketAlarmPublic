@@ -1,4 +1,4 @@
-# TicketAlarmApi.AlarmDto
+# TicketAlarm.AlarmDto
 
 ## Properties
 

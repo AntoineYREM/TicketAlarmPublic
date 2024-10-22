@@ -1,4 +1,4 @@
-# TicketAlarmApi.AvailabilityApi
+# TicketAlarm.AvailabilityApi
 
 All URIs are relative to *http://localhost*
 
@@ -17,11 +17,17 @@ Method | HTTP request | Description
 ### Example
 
 ```javascript
-import TicketAlarmApi from 'ticket_alarm_api';
+import TicketAlarm from 'ticket_alarm';
+let defaultClient = TicketAlarm.ApiClient.instance;
+// Configure API key authorization: Bearer
+let Bearer = defaultClient.authentications['Bearer'];
+Bearer.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new TicketAlarmApi.AvailabilityApi();
+let apiInstance = new TicketAlarm.AvailabilityApi();
 let opts = {
-  'availabilityDto': new TicketAlarmApi.AvailabilityDto() // AvailabilityDto | 
+  'availabilityDto': new TicketAlarm.AvailabilityDto() // AvailabilityDto | 
 };
 apiInstance.apiAvailabilitysPost(opts, (error, data, response) => {
   if (error) {
@@ -45,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 

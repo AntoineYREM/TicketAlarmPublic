@@ -1,21 +1,23 @@
 openapi: 3.0.1
 info:
-  title: TicketAlarm.API
-  version: "1.0"
+  title: TicketAlarm
+  version: v1
 servers:
 - url: /
+security:
+- Bearer: []
 paths:
-  /api/alarms:
+  /api/alarms/{idShow}:
     get:
       parameters:
-      - explode: true
-        in: query
+      - explode: false
+        in: path
         name: idShow
-        required: false
+        required: true
         schema:
           format: int32
           type: integer
-        style: form
+        style: simple
       responses:
         "200":
           content:
@@ -37,6 +39,7 @@ paths:
           description: Success
       tags:
       - Alarm
+  /api/alarms:
     post:
       requestBody:
         content:
@@ -348,6 +351,34 @@ paths:
           description: Success
       tags:
       - Show
+  /authenticate:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginUserDto'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/LoginUserDto'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/LoginUserDto'
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                type: string
+            application/json:
+              schema:
+                type: string
+            text/json:
+              schema:
+                type: string
+          description: Success
+      tags:
+      - User
 components:
   schemas:
     AlarmDto:
@@ -417,6 +448,19 @@ components:
           nullable: true
           type: string
       type: object
+    LoginUserDto:
+      additionalProperties: false
+      example:
+        emailAddress: emailAddress
+        password: password
+      properties:
+        emailAddress:
+          nullable: true
+          type: string
+        password:
+          nullable: true
+          type: string
+      type: object
     ShowDto:
       additionalProperties: false
       example:
@@ -462,4 +506,12 @@ components:
         artist:
           $ref: '#/components/schemas/ArtistDto'
       type: object
+  securitySchemes:
+    Bearer:
+      description: "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter\
+        \ 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample:\
+        \ \"Bearer monToken\""
+      in: header
+      name: Authorization
+      type: apiKey
 

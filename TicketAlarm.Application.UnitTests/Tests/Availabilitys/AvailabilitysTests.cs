@@ -36,7 +36,7 @@ namespace TicketArtist.Application.UnitTests.Tests.Availabilitys
         }
 
         [Fact]
-        public async Task CreateAvailabilityRequest()
+        public async Task Create_Availability_ReturnsCorrectResults()
         {
             var handler = new CreateAvailabilityRequestHandler(_mockUnitOfWork.Object, _mapper, _mockEmailSender.Object, _mockMessageBrokerSender.Object, _mockTokenGenerator.Object);
             var result = await handler.Handle(new CreateAvailabilityRequest

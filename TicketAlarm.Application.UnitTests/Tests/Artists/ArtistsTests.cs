@@ -26,7 +26,7 @@ namespace TicketArtist.Application.UnitTests.Tests.Artists
         }
 
         [Fact]
-        public async Task CreateArtistRequest()
+        public async Task Create_Artist_ReturnsCorrectResults()
         {
             var handler = new CreateArtistRequestHandler(_mockUnitOfWork.Object, _mapper);
             var result = await handler.Handle(new CreateArtistRequest

@@ -29,7 +29,7 @@ namespace TicketAlarm.Application.UnitTests.Tests.Alarms
         }
 
         [Fact]
-        public async Task GetAlarmsRequest()
+        public async Task Get_Alarms_ReturnsCorrectResults()
         {
             var handler = new GetAlarmsRequestHandler(_mockUnitOfWork.Object, _mapper);
             var result = await handler.Handle(new GetAlarmsRequest() { IdShow = 1 }, CancellationToken.None);
@@ -39,7 +39,7 @@ namespace TicketAlarm.Application.UnitTests.Tests.Alarms
         }
 
         [Fact]
-        public async Task CreateAlarmRequest()
+        public async Task Create_Alarm_ReturnsCorrectResults()
         {
             var handler = new CreateAlarmRequestHandler(_mockUnitOfWork.Object, _mapper);
             var result = await handler.Handle(new Features.Alarm.Requests.Commands.CreateShowRequest()
@@ -60,7 +60,7 @@ namespace TicketAlarm.Application.UnitTests.Tests.Alarms
         }
 
         [Fact]
-        public async Task UpdateAlarmRequest()
+        public async Task Update_Alarm_ReturnsCorrectResults()
         {
             var handler = new UpdateAlarmRequestHandler(_mockUnitOfWork.Object, _mapper);
             var updatedAlarm = new AlarmDto()

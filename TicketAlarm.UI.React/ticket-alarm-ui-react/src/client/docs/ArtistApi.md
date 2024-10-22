@@ -1,4 +1,4 @@
-# TicketAlarmApi.ArtistApi
+# TicketAlarm.ArtistApi
 
 All URIs are relative to *http://localhost*
 
@@ -18,9 +18,15 @@ Method | HTTP request | Description
 ### Example
 
 ```javascript
-import TicketAlarmApi from 'ticket_alarm_api';
+import TicketAlarm from 'ticket_alarm';
+let defaultClient = TicketAlarm.ApiClient.instance;
+// Configure API key authorization: Bearer
+let Bearer = defaultClient.authentications['Bearer'];
+Bearer.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new TicketAlarmApi.ArtistApi();
+let apiInstance = new TicketAlarm.ArtistApi();
 apiInstance.apiArtistsGet((error, data, response) => {
   if (error) {
     console.error(error);
@@ -40,7 +46,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -57,11 +63,17 @@ No authorization required
 ### Example
 
 ```javascript
-import TicketAlarmApi from 'ticket_alarm_api';
+import TicketAlarm from 'ticket_alarm';
+let defaultClient = TicketAlarm.ApiClient.instance;
+// Configure API key authorization: Bearer
+let Bearer = defaultClient.authentications['Bearer'];
+Bearer.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new TicketAlarmApi.ArtistApi();
+let apiInstance = new TicketAlarm.ArtistApi();
 let opts = {
-  'artistDto': new TicketAlarmApi.ArtistDto() // ArtistDto | 
+  'artistDto': new TicketAlarm.ArtistDto() // ArtistDto | 
 };
 apiInstance.apiArtistsPost(opts, (error, data, response) => {
   if (error) {
@@ -85,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
